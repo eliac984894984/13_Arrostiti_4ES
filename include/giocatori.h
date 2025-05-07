@@ -1,15 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
 #ifndef GIOCATORI_H
 #define GIOCATORI_H
-
 #pragma once
 
-class giocatori
+class Giocatore
 {
-public:
-    giocatori();
-    ~giocatori();
-
-private:
+    ~Giocatore();
+    private:
+        string colore; // colore coniglio (pedina)
+        string nome;
+    public: 
+        Giocatore( string c, string n) : colore(c), nome(n) {}
+        ~Giocatore();
 
 };
 
