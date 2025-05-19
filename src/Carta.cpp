@@ -41,5 +41,11 @@ void Carta::inizializza() {
     carte.push_back("Un abaco con pianeti al posto delle palline");
     carte.push_back("Una testa di cervo appesa ad un muro bianco con una bacinella davanti.");
     carte.push_back("Due individui che osservano la luna su una panchina.");
-    carte.push_back("");
+    carte.push_back("Un albero senza foglie ma con delle nuvole al loro posto.");
+    carte.push_back("Un'ancora nelle dune di sabbie.");
+    carte.push_back("Una lampadina con un mago all'interno che la accende.");
+    carte.push_back("Un tornado generato da una mano.");
+    carte.push_back("Un braccio che esce dal mare con una fiaccola in mano.");
+    carte.push_back("Un insieme di uova di vario colore.");
+    carte.push_back("Un gruppo di ragazzi che non sanno fare il proprio lavoro :).");
 }
