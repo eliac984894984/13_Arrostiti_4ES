@@ -5,12 +5,11 @@
 
 class Carta
 {
+protected: 
+    vector<string> carte;
 public:
-    Carta();
-    ~Carta();
-
-private:
-
+    void inizializza() {}
+    
 };
 
 #endif
