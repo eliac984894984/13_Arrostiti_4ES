@@ -1,11 +1,12 @@
-#include "Mazzo.h"
+#include "../include/Carta.h"
+#include "../include/Mazzo.h"
+#include <iostream>
+#include <string>
+#include <vector>
+#include <string>
 
-Mazzo::Mazzo()
-{
+using namespace std;
 
-}
-
-Mazzo::~Mazzo()
-{
-
+void Mazzo::pesca(){
+    
 }

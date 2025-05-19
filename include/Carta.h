@@ -8,8 +8,7 @@ class Carta
 protected: 
     vector<string> carte;
 public:
-    void inizializza() {}
-    
+    void inizializza();
 };
 
 #endif
