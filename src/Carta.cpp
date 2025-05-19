@@ -31,4 +31,15 @@ void Carta::inizializza() {
     carte.push_back("Giostra dei cavalli.");
     carte.push_back("Due bambini che proiettano come ombra un lupo.");
     carte.push_back("Un labirinto con un bruco che entra.");
+    carte.push_back("Una bambina che da una rosa ad un drago blu.");
+    carte.push_back("Un uomo con la testa aperta piena di stelle e con delle chiavi in mano.");
+    carte.push_back("Un animale bianco in una foresta morta.");
+    carte.push_back("Una ragazza su un balcone che guarda la luna.");
+    carte.push_back("Una rosa in fiamme dentro una teca.");
+    carte.push_back("Un gatto con una palla di vetro che legge il futuro.");
+    carte.push_back("Un gatto pittore che dipinge un paesaggio.");
+    carte.push_back("Un abaco con pianeti al posto delle palline");
+    carte.push_back("Una testa di cervo appesa ad un muro bianco con una bacinella davanti.");
+    carte.push_back("Due individui che osservano la luna su una panchina.");
+    carte.push_back("");
 }
