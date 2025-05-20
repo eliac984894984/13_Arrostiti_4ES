@@ -4,7 +4,7 @@ using namespace std;
 void Regole::mostra(){
 
     cout<< "=== Regole del gioco ===" <<endl;
-    cout<< "Scopo: Il gioco che ha ricevuto molta fortuna e ancora tutt'ora è uno dei più famosi, ha come scopo quello di far 
+    cout<< "Scopo Il gioco che ha ricevuto molta fortuna e ancora tutt'ora è uno dei più famosi, ha come scopo quello di far 
     indovinare agli altri giocatori qual è la carta descritta dal narratore, così da poter conquistare punti che ti permetteranno 
     di svolgere un percorso che ti porterà alla vittoria!" << endl;
     cout<< "Tabellone: Il tabellone se pur presente in tutti i giochi da tavolo, ha un ruolo molto importante e significativo 
