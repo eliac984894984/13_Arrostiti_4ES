@@ -13,3 +13,8 @@ Giocatore::~Giocatore()
 {
 
 }
+
+bool Giocatore :: controlloPedine(string c) 
+{
+   
+}
