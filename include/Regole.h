@@ -6,8 +6,7 @@
 class Regole
 {
 public:
-    Regole();
-    ~Regole();
+    
     void mostra();
 };
 
