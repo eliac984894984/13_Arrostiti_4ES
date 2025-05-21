@@ -11,7 +11,7 @@ protected:
 
 public:
     Giocatore(string n, string c);
-    ~Giocatore();
+    bool controlloPedine(string c);
     // metodi da inserire
 };
 

@@ -9,10 +9,6 @@ Giocatore::Giocatore(string n, string c)
     c = colore;
 }
 
-Giocatore::~Giocatore()
-{
-
-}
 
 bool Giocatore :: controlloPedine(string c) 
 {
