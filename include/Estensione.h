@@ -7,7 +7,6 @@ class Estensione
 {
 public:
     Estensione();
-    ~Estensione();
 
 private:
 

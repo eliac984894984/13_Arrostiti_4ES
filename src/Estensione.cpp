@@ -4,8 +4,3 @@ Estensione::Estensione()
 {
 
 }
-
-Estensione::~Estensione()
-{
-
-}
