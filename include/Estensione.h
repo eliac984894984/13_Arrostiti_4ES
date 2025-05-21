@@ -5,10 +5,10 @@
 
 class Estensione
 {
+protected:
+    vector<string> carte;
 public:
-    Estensione();
-
-private:
+    void inizializza();
 
 };
 
