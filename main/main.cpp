@@ -64,6 +64,25 @@ int main(){
     Giocatore Giocatore4(nomeGiocatore, colore4);
     Giocatore4.controlloPedine(); //meccanismo per controllare che il colore sia valido
 
+    //meccanismo per scegliere se giocare con l'estensione o meno
+    do {
+        cout << "Scegli con quale estensione giocare:" << endl;
+        cout << "1. Gioco base" << endl;
+        cout << "2. Gioco con carte Disney" << endl;
+        cout << "Scelta: ";
+        cin >> scelta;
+
+
+        if (scelta == 1) {
+            cout << "Hai scelto il gioco base." << endl;
+        } else if (scelta == 2) {
+            cout << "Hai scelto il gioco con carte Disney." << endl;
+        } else {
+            cout << "Scelta non valida, riprova." << endl;
+        }
+    } while (scelta != 1 && scelta != 2);
+
     
+
 return 0;
 }
