@@ -6,9 +6,9 @@
 class Estensione
 {
 protected:
-    vector<string> carte;
+    vector<string> cartaestesa;
 public:
-    void definisci();
+   void definisci();
 
 };
 

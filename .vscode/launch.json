@@ -8,8 +8,13 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
+<<<<<<< Updated upstream
       "cwd": "c:/Users/dpaol/Documents/GitHub/13_Arrostiti_4ES/src",
       "program": "c:/Users/dpaol/Documents/GitHub/13_Arrostiti_4ES/src/build/Debug/outDebug",
+=======
+      "cwd": "c:/Users/dpaol/Documents/GitHub/13_Arrostiti_4ES/main",
+      "program": "c:/Users/dpaol/Documents/GitHub/13_Arrostiti_4ES/main/build/Debug/outDebug",
+>>>>>>> Stashed changes
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
