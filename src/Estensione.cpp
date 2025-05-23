@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 
 #include "../include/Estensione.h"
 #include <iostream>
@@ -6,18 +5,11 @@
 #include <vector>
 #include <string>
 
-=======
-#include "Estensione.h"
-#include <vector>
-#include <string>
-#include <iostream>
-
->>>>>>> Stashed changes
 using namespace std;
 
 void Estensione::definisci()
 {
-    carte.push_back("Alice, di alice nel paese delle meraviglie appoggiata all'orologio del bianconiglio ");
+    cartaestesa.push_back("Alice, di alice nel paese delle meraviglie appoggiata all'orologio del bianconiglio "); // da finire
     carte.push_back("Paesaggio verde con una scala a chiocciola al centro.");
     carte.push_back("Ragazzo sull'altalena appesa ad un ramo.");
     carte.push_back("Sfilata su tappeto rosso di guardie inglesi.");
