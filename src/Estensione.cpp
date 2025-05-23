@@ -17,11 +17,7 @@ using namespace std;
 
 void Estensione::definisci()
 {
-<<<<<<< Updated upstream
     carte.push_back("Alice, di alice nel paese delle meraviglie appoggiata all'orologio del bianconiglio ");
-=======
-    cartaestesa.push_back("Alice, di alice nel paese delle meraviglie appoggiata all'orologio del bianconiglio ");
->>>>>>> Stashed changes
     carte.push_back("Paesaggio verde con una scala a chiocciola al centro.");
     carte.push_back("Ragazzo sull'altalena appesa ad un ramo.");
     carte.push_back("Sfilata su tappeto rosso di guardie inglesi.");
@@ -62,12 +58,6 @@ void Estensione::definisci()
     carte.push_back("Un braccio che esce dal mare con una fiaccola in mano.");
     carte.push_back("Un insieme di uova di vario colore.");
     carte.push_back("Un gruppo di ragazzi che non sanno fare il proprio lavoro :).");
-<<<<<<< Updated upstream
-=======
-}
-
-
->>>>>>> Stashed changes
 }
 
 
