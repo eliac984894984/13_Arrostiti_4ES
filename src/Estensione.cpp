@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #include "../include/Estensione.h"
 #include <iostream>
 #include <string>
@@ -18,6 +19,15 @@ void Estensione::inizializza(){
 
 using namespace std;
 
+=======
+#include "Estensione.h"
+#include <vector>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+>>>>>>> Stashed changes
 void Estensione::definisci()
 {
     cartaestesa.push_back("Alice, di alice nel paese delle meraviglie appoggiata all'orologio del bianconiglio ");
@@ -67,4 +77,7 @@ void Estensione::definisci()
 }
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
