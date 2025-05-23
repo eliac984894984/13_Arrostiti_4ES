@@ -49,3 +49,12 @@ void Carta::inizializza() {
     carte.push_back("Un insieme di uova di vario colore.");
     carte.push_back("Un gruppo di ragazzi che non sanno fare il proprio lavoro :).");
 }
+
+void Carta::mischia()
+{
+    for (int i = 0; i < carte.size(); ++i) {
+        int j = rand() % carte.size();
+        swap(carte[i], carte[j]);
+    }
+
+}

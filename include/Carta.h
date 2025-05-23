@@ -9,6 +9,7 @@ protected:
     vector<string> carte;
 public:
     void inizializza();
+    void mischia();
 };
 
 #endif

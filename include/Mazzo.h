@@ -3,9 +3,12 @@
 #include "Carta.h"
 #pragma once
 
-class Mazzo
+class Mazzo : Carta
 {
+protected:
+    int numGiocatori;
 public:
+    Mazzo(int n);
     void pesca(); //Da ridefinire
 
 };
