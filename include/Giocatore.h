@@ -10,9 +10,11 @@ protected:
     string colore;
 
 public:
-    Giocatore(string n, string c);
-    bool controlloPedine(string c);
-    // metodi da inserire
+    Giocatore(string n, string c); 
+    //metodi
+    void controlloPedine();
+    string getColore();
+    
 };
 
 #endif
