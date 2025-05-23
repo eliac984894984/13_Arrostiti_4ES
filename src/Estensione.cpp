@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 #include "../include/Estensione.h"
 #include <iostream>
 #include <string>
@@ -8,29 +7,9 @@
 
 using namespace std;
 
-void Estensione::inizializza(){
-    carte.push_back("");  // Martina copia fino alla linea50
-}
-=======
-#include "Estensione.h"
-#include <vector>
-#include <string>
-#include <iostream>
-
-using namespace std;
-
-=======
-#include "Estensione.h"
-#include <vector>
-#include <string>
-#include <iostream>
-
-using namespace std;
-
->>>>>>> Stashed changes
 void Estensione::definisci()
 {
-    cartaestesa.push_back("Alice, di alice nel paese delle meraviglie appoggiata all'orologio del bianconiglio ");
+    carte.push_back("Alice, di alice nel paese delle meraviglie appoggiata all'orologio del bianconiglio ");
     carte.push_back("Paesaggio verde con una scala a chiocciola al centro.");
     carte.push_back("Ragazzo sull'altalena appesa ad un ramo.");
     carte.push_back("Sfilata su tappeto rosso di guardie inglesi.");
@@ -74,10 +53,3 @@ void Estensione::definisci()
 }
 
 
-}
-
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

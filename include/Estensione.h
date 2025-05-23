@@ -8,7 +8,7 @@ class Estensione
 protected:
     vector<string> carte;
 public:
-    void inizializza();
+    void definisci();
 
 };
 
