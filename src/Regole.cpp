@@ -1,4 +1,4 @@
-#include "Regole.h"
+#include "../include/Regole.h"
 #include <iostream>
 using namespace std;
 void Regole::mostra() {
