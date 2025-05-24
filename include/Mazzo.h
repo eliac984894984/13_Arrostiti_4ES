@@ -11,6 +11,7 @@ public:
     void pesca(int numGiocatori);
     vector<string> giocaCarteSulTavolo(int numGiocatori);
     void votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo);
+    void scarta(vector<string>& tavolo);
 };
 
 #endif

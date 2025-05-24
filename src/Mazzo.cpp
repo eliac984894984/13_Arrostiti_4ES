@@ -37,7 +37,6 @@ void Mazzo::distribuisci(int numGiocatori)
     cout<< endl;
 }
 
-
 void Mazzo::pesca(int numGiocatori)
 {
     int turno=0;
@@ -86,12 +85,15 @@ vector<string> Mazzo::giocaCarteSulTavolo(int numGiocatori)
 
         cout << "Giocatore " << i + 1 << " ha giocato: " << cartaGiocata << endl;
     }
-
+    for (int i = 0; i < tavolo.size() - 1; i++) {
+        int j = rand() % (i + 1);
+        swap(tavolo[i], tavolo[j]);
+    }
 
     cout << "Carte sul tavolo:"<<endl;
     for(int i=0;i<tavolo.size() ;i++){
         cout << "- "<<tavolo[i]<<endl;
-    }
+    } cout <<endl;
     return tavolo;
 }
 
@@ -116,4 +118,12 @@ void Mazzo::votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo )
     for (int i = 0; i < (int)tavolo.size(); ++i) {
         cout << "Carta " << i << " (" << tavolo[i] << ") ha ricevuto " << voti[i] << " voti."<<endl;
     }
+}
+
+void Mazzo::scarta(vector<string>& tavolo) 
+{
+    for (int i = 0; i < tavolo.size(); ++i) {
+        mazzo_scarti.push_back(tavolo[i]);
+    }
+    tavolo.clear();  // Rimuove tutte le carte dal tavolo
 }
