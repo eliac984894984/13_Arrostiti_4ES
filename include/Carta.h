@@ -7,6 +7,7 @@ class Carta
 {
 protected: 
     vector<string> carte;
+    vector<string> giocatori;
 public:
     void inizializza();
     void mischia();
