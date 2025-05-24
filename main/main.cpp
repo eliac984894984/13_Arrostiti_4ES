@@ -15,8 +15,7 @@ int main(){
     
     string nomeGiocatore, colore1, colore2, colore3, colore4, parola;
     int scelta;
-    int numGiocatori=4;
-    string carteTavolo[numGiocatori]; 
+    int numGiocatori=4; 
     
     Carta c;
     c.inizializza();
@@ -98,28 +97,27 @@ int main(){
         //giocatore 1 e' narratore 
         cout << "ora il giocatore 1 e' narratore. " << endl;
         //stampare le carte del giocatore 
+        cout << "il narratore seglie la carta che gli altri giocatori dovranno indovinare " << endl; 
+        //metodo scarta da aggiungere
         cout << "ora il narratore deve dire la parola " << endl; 
         cin >> parola; 
+        cout << "l'indicazione del narratore e'': " << parola << endl; 
 
+        //i giocatori scelgono la loro carta
         for(int i=0; i<3; i++)
         {
-            cout << "il giocatore " << i+1 << "scarta la sua carta " << endl; 
+            cout << "il giocatore " << i+2 << "scarta la sua carta " << endl; 
             //metodo scarta da aggiungere 
+            
+
+            //mischiare le carte con l'aggiunta della carta del narratore 
+            
+
+            for(int j=0; j<3; j++)
+            {
+                cout << "il giocatore " << i+2 << "punta la carta che ritiene corretta " << endl; 
+            }
         }
-
-
-        //mischiare le carte con l'aggiunta della carta del narratore 
-
-        cout << "ora il giocatore 2 punta la carta che ritiene corretta" << endl; 
-        //metodo
-        cout << "ora il giocatore 3 punta la carta che ritiene corretta" << endl; 
-        //metodo
-        cout << "ora il giocatore 4 punta la carta che ritiene corretta" << endl; 
-        //metodo
-
-        cout << "ora il narratore dice quale era la sua carta iniziale " << endl; 
-        //metodo 
-
 
        
 
