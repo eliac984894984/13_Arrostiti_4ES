@@ -103,12 +103,29 @@ int main(){
         cout << "ora il narratore deve scegliere la carta che i giocatori dovranno indovinare " << endl; 
         //mettere il metodo 
         cout << "ora il narratore deve dire la parola " << endl; 
-        //metter il metodo 
-   
+        //mettere il metodo 
+        cout << "il giocatore 2 sceglie la sua carta " << endl; 
+        //mettere il metodo 
+        cout << "il giocatore 3 sceglie la sua carta " << endl; 
+        //mettere il metodo
+        cout << "il giocatore 4 sceglie la sua carta " << endl; 
+        //mettere il metodo
 
-        cout << 
+        //mischiare le carte con l'aggiunta della carta del narratore 
 
-         //giocatore 2 e' narratore 
+        cout << "ora il giocatore 2 punta la carta che ritiene corretta" << endl; 
+        //metodo
+        cout << "ora il giocatore 3 punta la carta che ritiene corretta" << endl; 
+        //metodo
+        cout << "ora il giocatore 4 punta la carta che ritiene corretta" << endl; 
+        //metodo
+
+        cout << "ora il narratore dice quale era la sua carta iniziale " << endl; 
+        //metodo 
+
+        //assegnazione punti 
+
+        //giocatore 2 e' narratore 
         cout << "ora il giocatore 2 e' narratore." << endl;
         cout << "queste sono le carte del narratore" << endl; 
         //stampare le carte 
