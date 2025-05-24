@@ -5,12 +5,10 @@
 
 class Mazzo : Carta
 {
-protected:
-    int numGiocatori;
-public:
-    Mazzo(int n);
-    void distribuisci(); //Da ridefinire
 
+public:
+    void distribuisci(int numGiocatori);
+    void pesca(int numGiocatori);
 };
 
 #endif

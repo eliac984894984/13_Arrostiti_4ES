@@ -15,6 +15,7 @@ int main(){
     
     string nomeGiocatore, colore1, colore2, colore3, colore4;
     int scelta;
+    int numGiocatori=4;
     
     
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non è possibile per due giocatori scegliere la stessa pedina " << endl;
