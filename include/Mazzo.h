@@ -9,7 +9,7 @@ protected:
     int numGiocatori;
 public:
     Mazzo(int n);
-    void pesca(); //Da ridefinire
+    void distribuisci(); //Da ridefinire
 
 };
 
