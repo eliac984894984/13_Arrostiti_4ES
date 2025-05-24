@@ -34,22 +34,22 @@ void Estensione::definisci()
     cartaestesa.push_back("Coppa, del film -Cars-, che fluttua nel cielo nel lato inferiore della carta una deserto tracciato da dei segni di gomme di auto.");
     cartaestesa.push_back("Carta divisa a metà verticalmente, nella prima metà una savana in degrado, nella seconda metà la savana è popolata e fertile, nel cielo è presente il volto del Rè leone.");
     cartaestesa.push_back("Pluto su una barca con in manol una canna da pesca. In alto risplende una palla da discoteca e sullo sfondo in trasparenza ci sono delle figure che ballano.");
-    cartaestesa.push_back("Un uomo con la testa aperta piena di stelle e con delle chiavi in mano.");
-    cartaestesa.push_back("Un animale bianco in una foresta morta.");
-    cartaestesa.push_back("Una ragazza su un balcone che guarda la luna.");
-    cartaestesa.push_back("Una rosa in fiamme dentro una teca.");
-    cartaestesa.push_back("Un gatto con una palla di vetro che legge il futuro.");
-    cartaestesa.push_back("Un gatto pittore che dipinge un paesaggio.");
-    cartaestesa.push_back("Un abaco con pianeti al posto delle palline");
-    cartaestesa.push_back("Una testa di cervo appesa ad un muro bianco con una bacinella davanti.");
-    cartaestesa.push_back("Due individui che osservano la luna su una panchina.");
-    cartaestesa.push_back("Un albero senza foglie ma con delle nuvole al loro posto.");
-    cartaestesa.push_back("Un'ancora nelle dune di sabbie.");
-    cartaestesa.push_back("Una lampadina con un mago all'interno che la accende.");
-    cartaestesa.push_back("Un tornado generato da una mano.");
-    cartaestesa.push_back("Un braccio che esce dal mare con una fiaccola in mano.");
-    cartaestesa.push_back("Un insieme di uova di vario colore.");
-    cartaestesa.push_back("Un gruppo di ragazzi che non sanno fare il proprio lavoro :).");
+    cartaestesa.push_back("Donald Duck vestito da esploratore con in mano una torcia, si trova dentro una tomba e alle sue spalle si trova la porta di un caveau.");
+    cartaestesa.push_back("Dumbo che vola con delle cicogne al tramonro. Con laproboscide tiene un fagotto con all'interno una piuma.");
+    cartaestesa.push_back("Ruota d'oro di una carozza appoggiata nelle foglie di zucca, al di sopra vi sono i topolini di Cenerentola che sorreggono la scarpetta di cristallo.");
+    cartaestesa.push_back("Albero in una radura su cui è afflitto un volatintino con scritto: -Ricercato Flin Rider-.");
+    cartaestesa.push_back("Anna e Elasa, di -Frozen-, a cavallo che galoppano in un'atmosfera glaciale.");
+    cartaestesa.push_back("Baymax, di -Big Hero 6-, che sorregge una cassetta del pronto soccorso, è difronte a Yokai alle cui spalle c'è una figuira costituita da microrobot. I due si trovano in un luogo buio illuminato da lanterne viola.");
+    cartaestesa.push_back("Un pinguino con un papillon, sorregge un vassoio sopra la testa sul quale vi è un bicchiere di ghiaccio con un ombrellino da coctail.");
+    cartaestesa.push_back("Una volpe e un cane, arrivando da lati opposti, seguendo delle oreme in un prato e si incontrano.");
+    cartaestesa.push_back("Buz, di -Toy story-, che vola nello spazio.");
+    cartaestesa.push_back("Chitarra bianca, del film -coco-, appoggiata su un tappeto di fiori, dalla quale esce un bagliore e dei petali.");
+    cartaestesa.push_back("Tavolo, in una casa sfarzosa con un camino acceso, sul quale è presente un piatto di spaghetti conditi con polpette, due spaghetti formano un cuore.");
+    cartaestesa.push_back("Mike wazowski, di -Monster&Co-, accerchiato da pile di libri, che consulta un libro.");
+    cartaestesa.push_back("Boo, di -Monster&Co-, seduta sul letto che gurda Mike e Sulley sopra di lei.");
+    cartaestesa.push_back("Aurora, di -l'addormentat nel bosco-, che si aggira nella foresta, ci sono due alberi legati da un filo. Su questo filo sono poggiati degli uccelli.");
+    cartaestesa.push_back("Mela avvelelenata di Biancaneve appoggiata sul tronco di un albero tagliato con al di sopra una mano stregata che sta per afferarla. ");
+    cartaestesa.push_back("Due mani di uno scimpanzè che fanno da cornicve ad un fuoco in lontananza.");
 }
 
 
