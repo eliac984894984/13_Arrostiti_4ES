@@ -13,15 +13,11 @@ void Mazzo::distribuisci(int numGiocatori)
     carteGiocatori = vector<vector<string>>(numGiocatori);
     int turno = 0;
 
-    for(int i=0;i<20;i++) {       //Pesca solo le prime venti carte
+    for(int i=0;i<20;i++) {      //Non mi ricordo se iniziava con 5 o4 carte
         int giocatoreCorrente = turno % numGiocatori; 
-
         string cartaPescata = carte.front();
         carte.erase(carte.begin());
-
         carteGiocatori[giocatoreCorrente].push_back(cartaPescata);
-        cout << "Giocatore " << giocatoreCorrente + 1 << " pesca la carta: " << cartaPescata << endl;
-
         turno++;
     }
 
@@ -74,10 +70,10 @@ vector<string> Mazzo::giocaCarteSulTavolo(int numGiocatori)
         cout << "Giocatore " << i + 1 << ", scegli l'indice della carta da giocare: ";
         cin >> sceltaCarta;
 
-        if (sceltaCarta < 0 || sceltaCarta >= (int)carteGiocatori[i].size()) {
-            cout << "Scelta non valida, il giocatore perde il turno." << endl;
-            continue;   //smette di eseguire le istruzioni rimanenti di quel giro e passa subito alla prossima iterazione.
-        }
+        while (sceltaCarta < 0 || sceltaCarta >= (int)carteGiocatori[i].size()) {
+            cout << "Scelta non valida. Riprova: ";
+            cin >> sceltaCarta;
+            }
 
         string cartaGiocata = carteGiocatori[i][sceltaCarta];
         tavolo.push_back(cartaGiocata);
@@ -106,11 +102,12 @@ void Mazzo::votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo )
             cout << j << ": " << tavolo[j] << endl;
         }
         int voto;
+        cout <<"Voto: ";
         cin >> voto;
 
-        if (voto < 0 || voto >= (int)tavolo.size()) {
-            cout << "Voto non valido, salti il turno."<<endl;
-            continue;
+        while(voto<0||voto >= tavolo.size()){
+            cout <<"Voto non valido, Riprova: ";
+            cin >> voto;
         }
         voti[voto]++;
     }
