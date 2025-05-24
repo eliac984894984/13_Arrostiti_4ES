@@ -22,13 +22,13 @@ void Mazzo::distribuisci(int numGiocatori)
         carteGiocatori[giocatoreCorrente].push_back(cartaPescata);
         cout << "Giocatore " << giocatoreCorrente + 1 << " pesca la carta: " << cartaPescata << endl;
 
-        ++turno;
+        turno++;
     }
 
     cout << "Carte finali dei giocatori:"<<endl;
-    for (int i = 0; i < numGiocatori; ++i) {
+    for (int i = 0; i < numGiocatori; i++) {
         cout << "Giocatore " << i + 1 << ": ";
-        for (int j = 0; j < carteGiocatori[i].size(); ++j) {
+        for (int j = 0; j < carteGiocatori[i].size(); j++) {
             cout << carteGiocatori[i][j] << " ";
             cout <<endl;
         }
@@ -52,9 +52,9 @@ void Mazzo::pesca(int numGiocatori)
         ++turno;
     }
     cout << "Carte finali dei giocatori:"<<endl;
-    for (int i = 0; i < numGiocatori; ++i) {
+    for (int i = 0; i < numGiocatori; i++) {
         cout << "Giocatore " << i + 1 << ": ";
-        for (int j = 0; j < carteGiocatori[i].size(); ++j) {
+        for (int j = 0; j < carteGiocatori[i].size(); j++) {
             cout << carteGiocatori[i][j] << " ";
             cout <<endl;
         }
