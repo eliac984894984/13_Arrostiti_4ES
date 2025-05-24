@@ -103,7 +103,7 @@ int main(){
         cout << "l'indicazione del narratore e'': " << parola << endl; 
 
         //i giocatori scelgono la loro carta
-        for(int i=0; i<2; i++)
+        for(int i=0; i<3; i++)
         {
             cout << "il giocatore " << i+2 << "scarta la sua carta " << endl; 
             //metodo scarta da aggiungere 
