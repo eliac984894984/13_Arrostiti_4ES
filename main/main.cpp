@@ -13,12 +13,14 @@ using namespace std;
 
 int main(){
     
-    string nomeGiocatore, colore1, colore2, colore3, colore4;
+    string nomeGiocatore, colore1, colore2, colore3, colore4, parola;
     int scelta;
     int numGiocatori=4;
-
+    string carteTavolo[numGiocatori]; 
+    
     Carta c;
     c.inizializza();
+    Mazzo m;
     
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non è possibile per due giocatori scegliere la stessa pedina " << endl;
 
@@ -86,25 +88,25 @@ int main(){
         }
     } while (scelta != 1 && scelta != 2);
 
-    
+    //attribuzione delle prime 5 carte ai giocatori 
+    m.distribuisci(numGiocatori);
 
     do{
-         //giocatore 1 e' narratore 
-        cout << "ora il giocatore 1 e' narratore. " << endl;
-        cout << "queste sono le carte del narratore" << endl; 
-        //stampare le carte 
-
+        //le carte vengono mischiate: 
+        c.mischia(); 
         
-        cout << "ora il narratore deve scegliere la carta che i giocatori dovranno indovinare " << endl; 
-        //mettere il metodo 
+        //giocatore 1 e' narratore 
+        cout << "ora il giocatore 1 e' narratore. " << endl;
+        //stampare le carte del giocatore 
         cout << "ora il narratore deve dire la parola " << endl; 
-        //mettere il metodo 
-        cout << "il giocatore 2 sceglie la sua carta " << endl; 
-        //mettere il metodo 
-        cout << "il giocatore 3 sceglie la sua carta " << endl; 
-        //mettere il metodo
-        cout << "il giocatore 4 sceglie la sua carta " << endl; 
-        //mettere il metodo
+        cin >> parola; 
+
+        for(int i=0; i<3; i++)
+        {
+            cout << "il giocatore " << i+1 << "scarta la sua carta " << endl; 
+            //metodo scarta da aggiungere 
+        }
+
 
         //mischiare le carte con l'aggiunta della carta del narratore 
 
@@ -118,54 +120,10 @@ int main(){
         cout << "ora il narratore dice quale era la sua carta iniziale " << endl; 
         //metodo 
 
-        //assegnazione punti 
 
-        //giocatore 2 e' narratore 
-        cout << "ora il giocatore 2 e' narratore." << endl;
-        cout << "queste sono le carte del narratore" << endl; 
-        //stampare le carte 
+       
 
-        cout << "queste sono le carte del giocatore 1" << endl; 
-        //stampare le carte
-
-        cout << "queste sono le carte del giocatore 3" << endl; 
-        //stampare le carte
-
-        cout << "queste sono le carte del giocatore 4" << endl; 
-        //stampare le carte
-
-
-         //giocatore 3 e' narratore 
-        cout << "ora il giocatore 3 e' narratore." << endl;
-        cout << "queste sono le carte del narratore" << endl; 
-        //stampare le carte 
-
-        cout << "queste sono le carte del giocatore 1" << endl; 
-        //stampare le carte
-
-        cout << "queste sono le carte del giocatore 2" << endl; 
-        //stampare le carte
-
-        cout << "queste sono le carte del giocatore 4" << endl; 
-        //stampare le carte
-
-
-         //giocatore 4 e' narratore
-        cout << "ora il giocatore 4 e' narratore." << endl;
-        cout << "queste sono le carte del narratore" << endl; 
-        //stampare le carte 
-
-        cout << "queste sono le carte del giocatore 1" << endl; 
-        //stampare le carte
-
-        cout << "queste sono le carte del giocatore 2" << endl; 
-        //stampare le carte
-
-        cout << "queste sono le carte del giocatore 3" << endl; 
-        //stampare le carte
-
-
-    }while(/*condizione di fine gioco-fine tabellone*/true);
+    }while(/*condizione di fine gioco-fine tabellone*/ true);
 
 return 0;
 }
