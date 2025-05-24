@@ -15,7 +15,7 @@ private:
 
 public:
     Tabellone();
-    ~Tabellone();
+
     void Stampa() ; 
 };
 

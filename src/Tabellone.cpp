@@ -40,7 +40,3 @@ void Tabellone::Stampa()
 }
 
 
-Tabellone::~Tabellone()
-{
-
-}
