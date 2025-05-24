@@ -16,6 +16,7 @@ int main(){
     string nomeGiocatore, colore1, colore2, colore3, colore4;
     int scelta;
     
+    
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non è possibile per due giocatori scegliere la stessa pedina " << endl;
 
     //primo giocatore
@@ -83,6 +84,76 @@ int main(){
     } while (scelta != 1 && scelta != 2);
 
     
+
+    do{
+         //giocatore 1 e' narratore 
+        cout << "ora il giocatore 1 e' narratore. " << endl;
+        cout << "queste sono le carte del narratore" << endl; 
+        //stampare le carte 
+
+        cout << "queste sono le carte del giocatore 2" << endl; 
+        //stampare le carte
+
+        cout << "queste sono le carte del giocatore 3" << endl; 
+        //stampare le carte
+
+        cout << "queste sono le carte del giocatore 4" << endl; 
+        //stampare le carte
+
+        cout << "ora il narratore deve scegliere la carta che i giocatori dovranno indovinare " << endl; 
+        //mettere il metodo 
+        cout << "ora il narratore deve dire la parola " << endl; 
+        //metter il metodo 
+   
+
+        cout << 
+
+         //giocatore 2 e' narratore 
+        cout << "ora il giocatore 2 e' narratore." << endl;
+        cout << "queste sono le carte del narratore" << endl; 
+        //stampare le carte 
+
+        cout << "queste sono le carte del giocatore 1" << endl; 
+        //stampare le carte
+
+        cout << "queste sono le carte del giocatore 3" << endl; 
+        //stampare le carte
+
+        cout << "queste sono le carte del giocatore 4" << endl; 
+        //stampare le carte
+
+
+         //giocatore 3 e' narratore 
+        cout << "ora il giocatore 3 e' narratore." << endl;
+        cout << "queste sono le carte del narratore" << endl; 
+        //stampare le carte 
+
+        cout << "queste sono le carte del giocatore 1" << endl; 
+        //stampare le carte
+
+        cout << "queste sono le carte del giocatore 2" << endl; 
+        //stampare le carte
+
+        cout << "queste sono le carte del giocatore 4" << endl; 
+        //stampare le carte
+
+
+         //giocatore 4 e' narratore
+        cout << "ora il giocatore 4 e' narratore." << endl;
+        cout << "queste sono le carte del narratore" << endl; 
+        //stampare le carte 
+
+        cout << "queste sono le carte del giocatore 1" << endl; 
+        //stampare le carte
+
+        cout << "queste sono le carte del giocatore 2" << endl; 
+        //stampare le carte
+
+        cout << "queste sono le carte del giocatore 3" << endl; 
+        //stampare le carte
+
+
+    }while(/*condizione di fine gioco-fine tabellone*/true);
 
 return 0;
 }
