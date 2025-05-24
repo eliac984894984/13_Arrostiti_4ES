@@ -8,13 +8,13 @@
 using namespace std;
 
 Mazzo::Mazzo(int n) : numGiocatori(n) {}
-void Mazzo::pesca()
+void Mazzo::distribuisci()
 {
     vector<vector<string>> carteGiocatori(numGiocatori);
     int turno = 0;
 
-    while (!carte.empty()) {       //Continua finchè è falso
-        int giocatoreCorrente = turno % numGiocatori;
+    for(int i=0;i<20;i++) {       //Pesca solo le prime venti carte
+        int giocatoreCorrente = turno % numGiocatori; 
 
         string cartaPescata = carte.front();
         carte.erase(carte.begin());
