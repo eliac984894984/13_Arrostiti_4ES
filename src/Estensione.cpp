@@ -9,7 +9,7 @@ using namespace std;
 
 void Estensione::definisci()
 {
-    cartaestesa.push_back("Alice, di alice nel paese delle meraviglie appoggiata all'orologio del bianconiglio ");
+    cartaestesa.push_back("Alice, di -alice nel paese delle meraviglie- appoggiata all'orologio del bianconiglio ");
     cartaestesa.push_back("Stich alieno con in mano una chitarra che guarda saturno.");
     cartaestesa.push_back("Due cerbiatti, Bambi e sua mamma, abbracciati, circondati da un paesaggio naturale.");
     cartaestesa.push_back("Al centro vi è un trono dorato accerchiato da un'aura su cui side topolino, sotto al trono c'è Pluto e un'altro Topolino che porge una corona al sovrano");
@@ -17,23 +17,23 @@ void Estensione::definisci()
     cartaestesa.push_back("I capelli di Rapunzel creano una sorta di tenda che contorna la carta, al centro vi sono delle forbici e un scia di lanterne su sfondo scuro.");
     cartaestesa.push_back("Donald Duck, mentre trascina un sacco di soldi, viene sollevato da una mano gigante che arriva dall'alto .");
     cartaestesa.push_back("Dusty, di Planes, che volo in un campo di mais, nel bordo inferiore ci sono delle bandiere, nela parte alta dei pop corn.");
-    cartaestesa.push_back("Lamapa Pixar, dalla cui testa sporge la lampazina che illumina l'ambiente buio.");
+    cartaestesa.push_back("Lampa Pixar, dalla cui testa sporge la lampazina che illumina l'ambiente buio.");
     cartaestesa.push_back("Libro tenuto aperto da due mani umane e una zampa di Winnie de Poo, su una pagina è raffigurato Winnie de Poo (su questa pagina è poggiata un'ape e da un barattolo cola del miele), l'altra pagina raffigura un albero.");
     cartaestesa.push_back("Mushu che tiene un pennello e dissegna il principe capovolto in metà carta, nell'altra metà un pennello disegna Mulan accerchiata da fiori rosa.");
     cartaestesa.push_back("Cappello da Maga del film -Fantasia- dal quale esce violentemente dell'acqua.");
     cartaestesa.push_back("Al centro una grande rosa sospesa, al di sotto raffigurata in piccolo Belle che ammira la rosa.");
     cartaestesa.push_back("Elasticgirl, del film -Gli incredibili-. Ha in braccio il figlio mentre con la mano sinistra afferra un cattivo.");
-    cartaestesa.push_back("Ragazza su una scala in cielo e in mezzo alle colombe.");
-    cartaestesa.push_back("Clessidra con una persona in entrambi i lati e con la sabbia che scende.");
-    cartaestesa.push_back("Un uomo con una corona e con una gonna.");
-    cartaestesa.push_back("un uomo in prigione che guarda il cielo da una finestrella.");
-    cartaestesa.push_back("un uomo su un cavallo che dupera un ponte arcobaleno.");
-    cartaestesa.push_back("Una pila di libri con un uomo sopra.");
-    cartaestesa.push_back("Una porta che da sul vuoto.");
-    cartaestesa.push_back("Giostra dei cavalli.");
-    cartaestesa.push_back("Due bambini che proiettano come ombra un lupo.");
-    cartaestesa.push_back("Un labirinto con un bruco che entra.");
-    cartaestesa.push_back("Una bambina che da una rosa ad un drago blu.");
+    cartaestesa.push_back("Ralph, di -Ralph spacca tutto-, all'interno di un gioco tipo Candy Crush.");
+    cartaestesa.push_back("Spirale di fiori rosa posisizionati in terra in un prato accerchiato da piante.");
+    cartaestesa.push_back("Pinocchio con il naso allungato sulla cui punta ci sono delle piante e su cui viene versata dell'acqua da un innaffiatoio.");
+    cartaestesa.push_back("Vanellope, di -Ralph spacca tutto-, con degli occhiali grandi che surfa su una freccia accerchiata da cuori.");
+    cartaestesa.push_back("Barca della intro Walt Disney, che naviga in un mare di spartiti pieni di note, con alla guida Topolino.");
+    cartaestesa.push_back("I gatti, degli -Aristogatti-, che ballano sulle note che escono da una tromba.");
+    cartaestesa.push_back("Bolt, del film -Bolt-, seduto ad un tavolo che ammira una bistecca, sullo sfondo è presente la gatta, Mittens.");
+    cartaestesa.push_back("Cars pronto alla partenza di una gara in un circuito insieme ad alte macchine.");
+    cartaestesa.push_back("Coppa, del film -Cars-, che fluttua nel cielo nel lato inferiore della carta una deserto tracciato da dei segni di gomme di auto.");
+    cartaestesa.push_back("Carta divisa a metà verticalmente, nella prima metà una savana in degrado, nella seconda metà la savana è popolata e fertile, nel cielo è presente il volto del Rè leone.");
+    cartaestesa.push_back("Pluto su una barca con in manol una canna da pesca. In alto risplende una palla da discoteca e sullo sfondo in trasparenza ci sono delle figure che ballano.");
     cartaestesa.push_back("Un uomo con la testa aperta piena di stelle e con delle chiavi in mano.");
     cartaestesa.push_back("Un animale bianco in una foresta morta.");
     cartaestesa.push_back("Una ragazza su un balcone che guarda la luna.");
