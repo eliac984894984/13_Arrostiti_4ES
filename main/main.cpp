@@ -94,15 +94,7 @@ int main(){
         cout << "queste sono le carte del narratore" << endl; 
         //stampare le carte 
 
-        cout << "queste sono le carte del giocatore 2" << endl; 
-        //stampare le carte
-
-        cout << "queste sono le carte del giocatore 3" << endl; 
-        //stampare le carte
-
-        cout << "queste sono le carte del giocatore 4" << endl; 
-        //stampare le carte
-
+        
         cout << "ora il narratore deve scegliere la carta che i giocatori dovranno indovinare " << endl; 
         //mettere il metodo 
         cout << "ora il narratore deve dire la parola " << endl; 
