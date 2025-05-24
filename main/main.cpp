@@ -77,7 +77,6 @@ int main(){
         cout << "Scelta: ";
         cin >> scelta;
 
-
         if (scelta == 1) {
             cout << "Hai scelto il gioco base." << endl;
         } else if (scelta == 2) {
@@ -104,7 +103,7 @@ int main(){
         cout << "l'indicazione del narratore e'': " << parola << endl; 
 
         //i giocatori scelgono la loro carta
-        for(int i=0; i<3; i++)
+        for(int i=0; i<2; i++)
         {
             cout << "il giocatore " << i+2 << "scarta la sua carta " << endl; 
             //metodo scarta da aggiungere 
@@ -119,7 +118,18 @@ int main(){
             }
         }
 
+       //giocatore 2 e' il narratore 
        
+        //tutti i gioatori pescano la nuova carta
+        m.pesca(numGiocatori);
+       
+       cout << "ora il giocatore 2 e' narratore. " << endl;
+        //stampare le carte del giocatore 
+        cout << "il narratore seglie la carta che gli altri giocatori dovranno indovinare " << endl; 
+        //metodo scarta da aggiungere
+        cout << "ora il narratore deve dire la parola " << endl; 
+        cin >> parola; 
+        cout << "l'indicazione del narratore e'': " << parola << endl; 
 
     }while(/*condizione di fine gioco-fine tabellone*/ true);
 
