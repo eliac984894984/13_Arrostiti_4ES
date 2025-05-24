@@ -62,3 +62,5 @@ void Mazzo::pesca(int numGiocatori)
         cout << endl;
     } 
 }
+
+vector<string> Mazzo
