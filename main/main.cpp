@@ -20,6 +20,8 @@ int main(){
     Carta c;
     c.inizializza();
     Mazzo m;
+    Regole r; 
+    r.mostra(); 
     
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non è possibile per due giocatori scegliere la stessa pedina " << endl;
 
