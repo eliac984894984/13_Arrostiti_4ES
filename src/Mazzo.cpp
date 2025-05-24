@@ -37,6 +37,7 @@ void Mazzo::distribuisci(int numGiocatori)
     cout<< endl;
 }
 
+
 void Mazzo::pesca(int numGiocatori)
 {
     int turno=0;
