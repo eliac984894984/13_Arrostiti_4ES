@@ -63,4 +63,57 @@ void Mazzo::pesca(int numGiocatori)
     } 
 }
 
-vector<string> Mazzo
+vector<string> Mazzo::giocaCarteSulTavolo(int numGiocatori)
+{
+    vector<string> tavolo;
+    for (int i = 0; i < numGiocatori; i++) {
+        cout << "Mano del giocatore " << i + 1 << ": "<<endl;
+        for (int j = 0; j < carteGiocatori[i].size(); j++) {
+            cout << j << ": " << carteGiocatori[i][j] << endl;
+        }
+        int sceltaCarta;
+        cout << "Giocatore " << i + 1 << ", scegli l'indice della carta da giocare: ";
+        cin >> sceltaCarta;
+
+        if (sceltaCarta < 0 || sceltaCarta >= (int)carteGiocatori[i].size()) {
+            cout << "Scelta non valida, il giocatore perde il turno." << endl;
+            continue;   //smette di eseguire le istruzioni rimanenti di quel giro e passa subito alla prossima iterazione.
+        }
+
+        string cartaGiocata = carteGiocatori[i][sceltaCarta];
+        tavolo.push_back(cartaGiocata);
+        carteGiocatori[i].erase(carteGiocatori[i].begin() + sceltaCarta);
+
+        cout << "Giocatore " << i + 1 << " ha giocato: " << cartaGiocata << endl;
+    }
+
+
+    cout << "Carte sul tavolo:"<<endl;
+    for(int i=0;i<tavolo.size() ;i++){
+        cout << "- "<<tavolo[i]<<endl;
+    }
+    return tavolo;
+}
+
+void Mazzo::votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo )
+{
+    vector<int> voti(tavolo.size(), 0);  // Voti per ogni carta sul tavolo
+    for (int i = 0; i < numGiocatori; i++) {
+        cout << "Giocatore " << i+1 << ", vota una carta tra queste (inserisci l'indice): "<<endl;
+        for (int j = 0; j < (int)tavolo.size(); j++) {
+            cout << j << ": " << tavolo[j] << endl;
+        }
+        int voto;
+        cin >> voto;
+
+        if (voto < 0 || voto >= (int)tavolo.size()) {
+            cout << "Voto non valido, salti il turno."<<endl;
+            continue;
+        }
+        voti[voto]++;
+    }
+    cout << "Risultati votazione:"<<endl;
+    for (int i = 0; i < (int)tavolo.size(); ++i) {
+        cout << "Carta " << i << " (" << tavolo[i] << ") ha ricevuto " << voti[i] << " voti."<<endl;
+    }
+}
