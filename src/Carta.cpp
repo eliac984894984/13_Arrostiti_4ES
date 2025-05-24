@@ -27,7 +27,7 @@ void Carta::inizializza() {
     carte.push_back("Un uomo in prigione che guarda il cielo da una finestrella.");
     carte.push_back("Un bambino su un cavallo che supera un ponte arcobaleno.");
     carte.push_back("Una pila di libri con un uomo sopra.");
-    carte.push_back("Una porta che da su un celio con nuvole.");
+    carte.push_back("Una porta che da su un cielo con nuvole.");
     carte.push_back("Giostra dei cavalli.");
     carte.push_back("Due bambini che proiettano come ombra un lupo.");
     carte.push_back("Un labirinto con un entrata e un uscita.");
