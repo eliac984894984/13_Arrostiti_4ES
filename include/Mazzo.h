@@ -12,6 +12,8 @@ public:
     vector<string> giocaCarte(int numGiocatori, int narratore);
     void votaCarte(int numGiocatori, vector<string>& tavolo, int narratore);
     void scarta(vector<string>& tavolo);
+    void ricarica();
+    bool mazzo_v();
 };
 
 #endif

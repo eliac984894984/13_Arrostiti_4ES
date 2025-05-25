@@ -124,41 +124,6 @@ vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore)
     cout << endl;
     return tavolo;
 
-
-{
-    vector<string> tavolo;
-    for (int i = 0; i < numGiocatori; i++) {
-        cout << "Mano del giocatore " << i + 1 << ": "<<endl;
-        for (int j = 0; j < carteGiocatori[i].size(); j++) {
-            cout << j << ": " << carteGiocatori[i][j] << endl;
-        }
-        int sceltaCarta;
-        cout << "Giocatore " << i + 1 << ", scegli l'indice della carta da giocare: ";
-        cin >> sceltaCarta;
-
-        while (sceltaCarta < 0 || sceltaCarta >= (int)carteGiocatori[i].size()) {
-            cout << "Scelta non valida. Riprova: ";
-            cin >> sceltaCarta;
-            }
-
-        string cartaGiocata = carteGiocatori[i][sceltaCarta];
-        tavolo.push_back(cartaGiocata);
-        carteGiocatori[i].erase(carteGiocatori[i].begin() + sceltaCarta);
-
-        cout << "Giocatore " << i + 1 << " ha giocato: " << cartaGiocata << endl;
-    }
-    for (int i = 0; i < tavolo.size() - 1; i++) {
-        int j = rand() % (i + 1);
-        swap(tavolo[i], tavolo[j]);
-    }
-
-    cout << "Carte sul tavolo:"<<endl;
-    for(int i=0;i<tavolo.size() ;i++){
-        cout << "- "<<tavolo[i]<<endl;
-    } cout <<endl;
-    return tavolo;
-}
-
 }
 
 void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore) {
@@ -189,11 +154,28 @@ void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore) {
     }
 }
 
-
 void Mazzo::scarta(vector<string>& tavolo) 
 {
     for (int i = 0; i < tavolo.size(); ++i) {
         mazzo_scarti.push_back(tavolo[i]);
     }
     tavolo.clear();  // Rimuove tutte le carte dal tavolo
+}
+
+bool Mazzo::mazzo_v() 
+{
+    return carte.empty();
+}
+
+void Mazzo::ricarica() {
+    if (mazzo_scarti.empty()) {
+        cout << "Non ci sono carte da riciclare!" << endl;
+        return;
+    }
+
+    cout << "Il mazzo è finito! Riciclo gli scarti..." << endl;
+
+    carte = mazzo_scarti; 
+    mazzo_scarti.clear(); 
+    mischia();           
 }
