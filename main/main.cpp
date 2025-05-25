@@ -13,8 +13,8 @@ using namespace std;
 
 int main(){
     
-    string nomeGiocatore, colore1, colore2, colore3, colore4, parola;
-    int scelta, narratore=0;
+    string nomeGiocatore, colore1, colore2, colore3, colore4, cartaNarratore;
+    int scelta, narratore=0, punti1=0, punti2=0, punti3=0, punti4=0;
     int numGiocatori=4; 
     vector<string> carte_tavolo;
 
@@ -104,12 +104,52 @@ int main(){
 
             cout << "il narratore e' il giocatore: " << narratore + 1 << endl; 
        
-            carte_tavolo= m.giocaCarte(numGiocatori, narratore); //il narratore sceglie la sua carta e tutti i giocatori giocano la loro carta
-            m.votaCarte(numGiocatori, carte_tavolo, i); //i giocatori votano la presunta carta corretta
+            carte_tavolo= m.giocaCarte(numGiocatori, narratore, cartaNarratore); //il narratore sceglie la sua carta e tutti i giocatori giocano la loro carta
+            m.votaCarte(numGiocatori, carte_tavolo, i, punti1, punti2, punti3, punti4, cartaNarratore); //i giocatori votano la presunta carta corretta
             m.scarta(carte_tavolo); //le carte sul tavolo vengono scartate e messe nel mazzo degli scarti
+            m.pesca(numGiocatori); //la nuova carta viene pescata 
             narratore++; //il narratore cambia e diventa il giocatore successivo 
         }
-        }while(true /*mettere condizione dei punti*/ );
+        }while(punti1<=30 && punti2<=30 && punti3<=30 && punti4<=30 );
+
+        if(punti1>=30) 
+        {
+            cout << "il giocatore 1 ha vinto! " << endl; 
+        }
+        if(punti2>=30)
+        {
+            cout<<"il giocatore 2 ha vinto! " << endl; 
+        }
+        if(punti3>=30)
+        {
+            cout<<"il giocatore 3 ha vinto! " << endl; 
+        }
+        if(punti4>=30)
+        {
+            cout<<"il giocatore 4 ha vinto! " << endl; 
+        }
+    }
+
+    //scelta del gioco con le estensioni 
+    if(scelta==2) 
+    {
+        //rifare la stessa cosa ma con i metodi dell'estensione 
+        if(punti1>=30) 
+        {
+            cout << "il giocatore 1 ha vinto! " << endl; 
+        }
+        if(punti2>=30)
+        {
+            cout<<"il giocatore 2 ha vinto! " << endl; 
+        }
+        if(punti3>=30)
+        {
+            cout<<"il giocatore 3 ha vinto! " << endl; 
+        }
+        if(punti4>=30)
+        {
+            cout<<"il giocatore 4 ha vinto! " << endl; 
+        }
     }
 
 

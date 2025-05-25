@@ -13,7 +13,7 @@ void Mazzo::distribuisci(int numGiocatori)
     carteGiocatori = vector<vector<string>>(numGiocatori);
     int turno = 0;
 
-    for(int i=0;i<20;i++) {      //Non mi ricordo se iniziava con 5 o4 carte
+    for(int i=0;i<20;i++) {      
         int giocatoreCorrente = turno % numGiocatori; 
         string cartaPescata = carte.front();
         carte.erase(carte.begin());
@@ -36,6 +36,8 @@ void Mazzo::distribuisci(int numGiocatori)
 void Mazzo::pesca(int numGiocatori)
 {
     int turno=0;
+    string tasto; 
+
     for(int i=0;i<4;i++) {
         int giocatoreCorrente = turno % numGiocatori;
 
@@ -49,6 +51,8 @@ void Mazzo::pesca(int numGiocatori)
     }
     cout << "Carte finali dei giocatori:"<<endl;
     for (int i = 0; i < numGiocatori; i++) {
+        cout << "per visualizzare le carte del giocatore " << i+1 << " premere un tasto casuale " << endl; 
+        cin >> tasto; 
         cout << "Giocatore " << i + 1 << ": ";
         for (int j = 0; j < carteGiocatori[i].size(); j++) {
             cout << carteGiocatori[i][j] << " ";
@@ -58,9 +62,10 @@ void Mazzo::pesca(int numGiocatori)
     } 
 }
 
-vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore)
+vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore, string&cartaNarratore)
 {
     vector<string> tavolo;
+    //string cartaNarratore; devo dichiararlo ancora?
 
     cout << "Mano del narratore (Giocatore " << narratore + 1 << "): " << endl;
     for (int j = 0; j < carteGiocatori[narratore].size(); j++) 
@@ -81,6 +86,7 @@ vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore)
         cin >> sceltaCarta;
     }
     string cartaGiocata = carteGiocatori[narratore][sceltaCarta];
+    cartaNarratore=cartaGiocata;
     tavolo.push_back(cartaGiocata);
     carteGiocatori[narratore].erase(carteGiocatori[narratore].begin() + sceltaCarta);
     cout <<endl;
@@ -126,7 +132,7 @@ vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore)
 
 }
 
-void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore) {
+void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore, int& p1, int& p2, int& p3, int& p4, string cartaNarratore ) {
     vector<int> voti(tavolo.size(), 0);
     for (int i = 0; i < numGiocatori; i++) {
         if (i == narratore) {
