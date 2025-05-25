@@ -9,8 +9,8 @@ class Mazzo : Carta
 public:
     void distribuisci(int numGiocatori);
     void pesca(int numGiocatori);
-    vector<string> giocaCarteSulTavolo(int numGiocatori);
-    void votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo);
+    vector<string> giocaCarteSulTavolo(int numGiocatori, int narratore);
+    void votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo, int narratore);
     void scarta(vector<string>& tavolo);
 };
 

@@ -58,7 +58,73 @@ void Mazzo::pesca(int numGiocatori)
     } 
 }
 
-vector<string> Mazzo::giocaCarteSulTavolo(int numGiocatori)
+vector<string> Mazzo::giocaCarteSulTavolo(int numGiocatori, int narratore)
+{
+    vector<string> tavolo;
+
+    cout << "Mano del narratore (Giocatore " << narratore + 1 << "): " << endl;
+    for (int j = 0; j < carteGiocatori[narratore].size(); j++) 
+    {
+        cout << j << ": " << carteGiocatori[narratore][j] << endl;
+    }
+    string desc;
+    cout <<"Il narratore sceglie una descrizione: ";
+    cin >> desc;
+    cout <<"la descrizione è: "<<desc<<endl;
+    int sceltaCarta;
+    cout << "Narratore, scegli l'indice della carta da giocare: ";
+    cin >> sceltaCarta;
+
+    while (sceltaCarta < 0 || sceltaCarta >= (int)carteGiocatori[narratore].size())
+    {
+        cout << "Scelta non valida. Riprova: ";
+        cin >> sceltaCarta;
+    }
+    string cartaGiocata = carteGiocatori[narratore][sceltaCarta];
+    tavolo.push_back(cartaGiocata);
+    carteGiocatori[narratore].erase(carteGiocatori[narratore].begin() + sceltaCarta);
+    cout <<endl;
+    cout <<endl;
+
+    for (int i = 0; i < numGiocatori; i++)
+    {
+        if (i == narratore) continue;  
+
+        cout << "Mano del giocatore " << i + 1 << ": " << endl;
+        for (int j = 0; j < carteGiocatori[i].size(); j++) 
+        {
+            cout << j << ": " << carteGiocatori[i][j] << endl;
+        }
+        cout <<endl;
+        cout << "Giocatore " << i + 1 << ", scegli l'indice della carta da giocare: ";
+        cin >> sceltaCarta;
+        while (sceltaCarta < 0 || sceltaCarta >= (int)carteGiocatori[i].size()) 
+        {
+            cout << "Scelta non valida. Riprova: ";
+            cin >> sceltaCarta;
+        }
+        string cartaGiocata = carteGiocatori[i][sceltaCarta];
+        tavolo.push_back(cartaGiocata);
+        carteGiocatori[i].erase(carteGiocatori[i].begin() + sceltaCarta);
+
+        cout << "Giocatore " << i + 1 << " ha giocato: " << cartaGiocata << endl;
+    }
+
+    for (int i =0;i< (int)tavolo.size() - 1; i++)
+    {
+        int j = rand() % (i + 1);
+        swap(tavolo[i], tavolo[j]);
+    }
+
+    cout << "Carte sul tavolo:" << endl;
+    for (int i = 0; i < (int)tavolo.size(); i++) 
+    {
+        cout << "- " << tavolo[i] << endl;
+    }
+    cout << endl;
+    return tavolo;
+
+
 {
     vector<string> tavolo;
     for (int i = 0; i < numGiocatori; i++) {
@@ -93,29 +159,36 @@ vector<string> Mazzo::giocaCarteSulTavolo(int numGiocatori)
     return tavolo;
 }
 
-void Mazzo::votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo )
-{
-    vector<int> voti(tavolo.size(), 0);  // Voti per ogni carta sul tavolo
+}
+
+void Mazzo::votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo, int narratore) {
+    vector<int> voti(tavolo.size(), 0);
     for (int i = 0; i < numGiocatori; i++) {
-        cout << "Giocatore " << i+1 << ", vota una carta tra queste (inserisci l'indice): "<<endl;
+        if (i == narratore) {
+            cout << "Giocatore " << i + 1 << " è il narratore e non vota.\n";
+            continue; 
+        }
+        cout << "Giocatore " << i + 1 << ", vota una carta tra queste (inserisci l'indice): " << endl;
         for (int j = 0; j < (int)tavolo.size(); j++) {
             cout << j << ": " << tavolo[j] << endl;
         }
         int voto;
-        cout <<"Voto: ";
+        cout << "Voto: ";
         cin >> voto;
-
-        while(voto<0||voto >= tavolo.size()){
-            cout <<"Voto non valido, Riprova: ";
+        while (voto < 0 || voto >= (int)tavolo.size()) {
+            cout << "Voto non valido, riprova: ";
             cin >> voto;
         }
         voti[voto]++;
     }
-    cout << "Risultati votazione:"<<endl;
+
+
+    cout << "Risultati votazione:" << endl;
     for (int i = 0; i < (int)tavolo.size(); ++i) {
-        cout << "Carta " << i << " (" << tavolo[i] << ") ha ricevuto " << voti[i] << " voti."<<endl;
+        cout << "Carta " << i << " (" << tavolo[i] << ") ha ricevuto " << voti[i] << " voti." << endl;
     }
 }
+
 
 void Mazzo::scarta(vector<string>& tavolo) 
 {
