@@ -14,14 +14,15 @@ using namespace std;
 int main(){
     
     string nomeGiocatore, colore1, colore2, colore3, colore4, parola;
-    int scelta;
+    int scelta, narratore=0;
     int numGiocatori=4; 
-    
-    Carta c;
-    c.inizializza();
-    Mazzo m;
-    Regole r; 
-    r.mostra(); 
+    vector<string> carte_tavolo;
+
+    Carta c; //creazione dell'oggetto carta 
+    c.inizializza(); //metodo per inizializzare tutte le carte 
+    Mazzo m; //creazione dell'oggetto mazzo 
+    Regole r; //creazione dell'oggetto regole 
+    r.mostra(); //metodo per mostrare le regole
     
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non è possibile per due giocatori scegliere la stessa pedina " << endl;
 
@@ -88,52 +89,29 @@ int main(){
         }
     } while (scelta != 1 && scelta != 2);
 
-    //attribuzione delle prime 5 carte ai giocatori 
-    m.distribuisci(numGiocatori);
+    //scelta del gioco di base
+    if (scelta==1) {
+        //attribuzione delle prime 5 carte ai giocatori 
+        m.distribuisci(numGiocatori);
 
-    do{
-        //le carte vengono mischiate: 
-        c.mischia(); 
-        
-        //giocatore 1 e' narratore 
-        cout << "ora il giocatore 1 e' narratore. " << endl;
-        //stampare le carte del giocatore 
-        cout << "il narratore seglie la carta che gli altri giocatori dovranno indovinare " << endl; 
-        //metodo scarta da aggiungere
-        cout << "ora il narratore deve dire la parola " << endl; 
-        cin >> parola; 
-        cout << "l'indicazione del narratore e'': " << parola << endl; 
-
-        //i giocatori scelgono la loro carta
-        for(int i=0; i<3; i++)
+        do{
+        //inizio effettivo del gioco     
+        for(int i=0; i<numGiocatori; i++)
         {
-            cout << "il giocatore " << i+2 << "scarta la sua carta " << endl; 
-            //metodo scarta da aggiungere 
-            
-
-            //mischiare le carte con l'aggiunta della carta del narratore 
-            
-
-            for(int j=0; j<3; j++)
-            {
-                cout << "il giocatore " << i+2 << "punta la carta che ritiene corretta " << endl; 
+            if(m.mazzo_v()) { //meccanismo per controllare se il mazzo generale finisce 
+                m.ricarica();
             }
+
+            cout << "il narratore e' il giocatore: " << narratore + 1 << endl; 
+       
+            carte_tavolo= m.giocaCarte(numGiocatori, narratore); //il narratore sceglie la sua carta e tutti i giocatori giocano la loro carta
+            m.votaCarte(numGiocatori, carte_tavolo, i); //i giocatori votano la presunta carta corretta
+            m.scarta(carte_tavolo); //le carte sul tavolo vengono scartate e messe nel mazzo degli scarti
+            narratore++; //il narratore cambia e diventa il giocatore successivo 
         }
+        }while(true /*mettere condizione dei punti*/ );
+    }
 
-       //giocatore 2 e' il narratore 
-       
-        //tutti i gioatori pescano la nuova carta
-        m.pesca(numGiocatori);
-       
-       cout << "ora il giocatore 2 e' narratore. " << endl;
-        //stampare le carte del giocatore 
-        cout << "il narratore seglie la carta che gli altri giocatori dovranno indovinare " << endl; 
-        //metodo scarta da aggiungere
-        cout << "ora il narratore deve dire la parola " << endl; 
-        cin >> parola; 
-        cout << "l'indicazione del narratore e'': " << parola << endl; 
-
-    }while(/*condizione di fine gioco-fine tabellone*/ true);
 
 return 0;
 }
