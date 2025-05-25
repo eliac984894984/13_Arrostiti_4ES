@@ -58,7 +58,7 @@ void Mazzo::pesca(int numGiocatori)
     } 
 }
 
-vector<string> Mazzo::giocaCarteSulTavolo(int numGiocatori, int narratore)
+vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore)
 {
     vector<string> tavolo;
 
@@ -161,7 +161,7 @@ vector<string> Mazzo::giocaCarteSulTavolo(int numGiocatori, int narratore)
 
 }
 
-void Mazzo::votaCarteSulTavolo(int numGiocatori, vector<string>& tavolo, int narratore) {
+void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore) {
     vector<int> voti(tavolo.size(), 0);
     for (int i = 0; i < numGiocatori; i++) {
         if (i == narratore) {
