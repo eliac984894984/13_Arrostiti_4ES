@@ -52,4 +52,10 @@ void Estensione::definisci()
     cartaestesa.push_back("Due mani di uno scimpanzè che fanno da cornicve ad un fuoco in lontananza.");
 }
 
-
+void Estensione::mischia_e() 
+{
+    for (int i = 0; i < cartaestesa.size(); ++i) {
+        int j = rand() % cartaestesa.size();
+        swap(cartaestesa[i], cartaestesa[j]);
+    }
+}

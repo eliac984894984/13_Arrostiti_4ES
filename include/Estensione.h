@@ -7,8 +7,11 @@ class Estensione
 {
 protected:
     vector<string> cartaestesa;
+    vector<vector<string>> carteGiocatori_e;
+    vector<string> mazzo_scarti_e;
 public:
    void definisci();
+   void mischia_e();
 
 };
 
