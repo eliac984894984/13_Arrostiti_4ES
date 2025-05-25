@@ -1,10 +1,5 @@
 #include "../include/Carta.h"
-#include <iostream>
-#include <string>
-#include <vector>
-#include <string>
 
-using namespace std;
 
 void Carta::inizializza() {
     carte.push_back("Guscio di lumaca con un apertura sul lato.");
