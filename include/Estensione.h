@@ -2,6 +2,11 @@
 #define ESTENSIONE_H
 
 #pragma once
+#include <vector>
+#include <string>
+using namespace std;
+
+
 
 class Estensione
 {
