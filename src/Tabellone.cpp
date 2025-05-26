@@ -36,6 +36,7 @@ void Tabellone::Stampa()
             else if(Tab[i][j]<10){ cout<<"  " << Tab[i][j] << " ";}
             else { cout<<" " << Tab[i][j] << " ";}
         }
+        cout <<endl;
     }
 }
 
