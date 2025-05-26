@@ -133,7 +133,7 @@ vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore, string&cartaNa
     cout <<"Il narratore sceglie una descrizione: ";
     cin.ignore();
     getline(cin, desc);
-    cout <<"la descrizione è: "<<desc<<endl;
+    cout <<"la descrizione e': "<<desc<<endl;
     int sceltaCarta;
     cout << "Narratore, scegli l'indice della carta da giocare: ";
     cin >> sceltaCarta;
@@ -196,7 +196,7 @@ void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore, i
 
     for (int i = 0; i < numGiocatori; i++) {
         if (i == narratore) {
-            cout << "Giocatore " << i + 1 << " è il narratore e non vota.\n";
+            cout << "Giocatore " << i + 1 << " e' il narratore e non vota.\n";
             continue; 
         }
         cout << "Giocatore " << i + 1 << ", vota una carta tra queste (inserisci l'indice): " << endl;
@@ -365,7 +365,7 @@ void Mazzo::ricarica() {
         return;
     }
 
-    cout << "Il mazzo è finito! Riciclo gli scarti..." << endl;
+    cout << "Il mazzo e' finito, Riciclo gli scarti..." << endl;
 
     carte = mazzo_scarti; 
     mazzo_scarti.clear(); 
