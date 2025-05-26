@@ -117,10 +117,10 @@ int main(){
             m.scarta(carte_tavolo); //le carte sul tavolo vengono scartate e messe nel mazzo degli scarti
             m.pesca(numGiocatori); //la nuova carta viene pescata 
             
-            if(punti1<=30 && punti2<=30 && punti3<=30 && punti4<=30) break;
-            
+            if(punti1>=30 || punti2>=30 || punti3>=30 || punti4>=30) break;
+            narratore = (narratore + 1) % numGiocatori;
         }
-        narratore = (narratore + 1) % numGiocatori; 
+         
         }while(punti1<=30 && punti2<=30 && punti3<=30 && punti4<=30 );
 
         if(punti1>=30) 
@@ -165,7 +165,7 @@ int main(){
             me.votaCarte_e(numGiocatori, carte_tavolo, i, punti1, punti2, punti3, punti4, cartaNarratore); //i giocatori votano la presunta carta corretta
             me.scarta_e(carte_tavolo); //le carte sul tavolo vengono scartate e messe nel mazzo degli scarti
             me.pesca_e(numGiocatori); //la nuova carta viene pescata 
-            if(punti1<=30 && punti2<=30 && punti3<=30 && punti4<=30) break;
+            if(punti1>=30 || punti2>=30 || punti3>=30 || punti4>=30) break;
            
         }
         narratore = (narratore + 1) % numGiocatori;
