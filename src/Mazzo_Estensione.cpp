@@ -186,6 +186,8 @@ vector<string> Mazzo_E::giocaCarte_e(int numGiocatori, int narratore, string&car
 
 void Mazzo_E::votaCarte_e(int numGiocatori, vector<string>& tavolo, int narratore, int& p1, int& p2, int& p3, int& p4, string cartaNarratore ) {
     vector<int> voti(tavolo.size(), 0);
+    int voto1, voto2, voto3, voto4;
+
     for (int i = 0; i < numGiocatori; i++) {
         if (i == narratore) {
             cout << "Giocatore " << i + 1 << " è il narratore e non vota.\n";
@@ -203,13 +205,139 @@ void Mazzo_E::votaCarte_e(int numGiocatori, vector<string>& tavolo, int narrator
             cin >> voto;
         }
         voti[voto]++;
-    }
 
+        if(tavolo[voto]==cartaNarratore) 
+        {
+            cout << "il giocatore " << i + 1 << " ha indovinato!";
+        }
+
+        if(i==0) voto1=voto; 
+        if(i==1) voto2=voto;
+        if(i==2) voto3=voto;
+        if(i==3) voto4=voto;
+
+    }
 
     cout << "Risultati votazione:" << endl;
     for (int i = 0; i < (int)tavolo.size(); ++i) {
         cout << "Carta " << i << " (" << tavolo[i] << ") ha ricevuto " << voti[i] << " voti." << endl;
     }
+
+     //gestione dei punti     
+   if(narratore==0) 
+   {
+    if((tavolo[voto2]==cartaNarratore && tavolo[voto3]==cartaNarratore && tavolo[voto4]==cartaNarratore)|| (tavolo[voto2]!=cartaNarratore && tavolo[voto3]!=cartaNarratore && tavolo[voto4]!=cartaNarratore))
+    {
+        p1=p1+0; 
+        p2=p2+2; 
+        p3=p3+2; 
+        p4=p4+2; 
+    }
+    else 
+    {
+        p1=p1+3;
+        if(tavolo[voto2]==cartaNarratore)
+        {
+            p2=p2+3;
+        }
+        if(tavolo[voto3]==cartaNarratore)
+        {
+            p3=p3+3;
+        }
+        if(tavolo[voto4]==cartaNarratore)
+        {
+            p4=p4+3;
+        }
+    }
+   }
+
+   if(narratore==1) 
+   {
+    if((tavolo[voto1]==cartaNarratore && tavolo[voto3]==cartaNarratore && tavolo[voto4]==cartaNarratore)|| (tavolo[voto1]!=cartaNarratore && tavolo[voto3]!=cartaNarratore && tavolo[voto4]!=cartaNarratore))
+    {
+        p1=p1+2; 
+        p2=p2+0; 
+        p3=p3+2; 
+        p4=p4+2;  
+    }
+    else 
+    {
+        p2=p2+3;
+        if(tavolo[voto1]==cartaNarratore)
+        {
+            p1=p1+3;
+        }
+        if(tavolo[voto3]==cartaNarratore)
+        {
+            p3=p3+3;
+        }
+        if(tavolo[voto4]==cartaNarratore)
+        {
+            p4=p4+3;
+        }
+    }
+    
+   }
+   
+   if(narratore==2) 
+   {
+    if((tavolo[voto2]==cartaNarratore && tavolo[voto1]==cartaNarratore && tavolo[voto4]==cartaNarratore)|| (tavolo[voto2]!=cartaNarratore && tavolo[voto1]!=cartaNarratore && tavolo[voto4]!=cartaNarratore))
+    {
+        p1=p1+2; 
+        p2=p2+2; 
+        p3=p3+0; 
+        p4=p4+2; 
+    }
+    else 
+    {
+        p3=p3+3;
+        if(tavolo[voto2]==cartaNarratore)
+        {
+            p2=p2+3;
+        }
+        if(tavolo[voto1]==cartaNarratore)
+        {
+            p1=p1+3;
+        }
+        if(tavolo[voto4]==cartaNarratore)
+        {
+            p4=p4+3;
+        }
+    }
+    }
+   
+   if(narratore==3) 
+   {
+    if((tavolo[voto2]==cartaNarratore && tavolo[voto3]==cartaNarratore && tavolo[voto1]==cartaNarratore)|| (tavolo[voto2]!=cartaNarratore && tavolo[voto3]!=cartaNarratore && tavolo[voto1]!=cartaNarratore))
+    {
+        p1=p1+2; 
+        p2=p2+2; 
+        p3=p3+2; 
+        p4=p4+0; 
+    }
+    else 
+    {
+        p4=p4+3;
+        if(tavolo[voto2]==cartaNarratore)
+        {
+            p2=p2+3;
+        }
+        if(tavolo[voto1]==cartaNarratore)
+        {
+            p1=p1+3;
+        }
+        if(tavolo[voto3]==cartaNarratore)
+        {
+            p3=p3+3;
+        }
+    }
+
+   }
+   cout <<"I punti, dopo questo turno di ogni giocatore sono"<<endl<<"Giocatore 1: "<<p1<<endl;
+   cout <<"Giocatore 2: "<<p2<<endl;
+   cout <<"Giocatore 3: "<<p3<<endl;
+   cout <<"Giocatore 4: "<<p4<<endl;
+
 }
 
 void Mazzo_E::scarta_e(vector<string>& tavolo) 
