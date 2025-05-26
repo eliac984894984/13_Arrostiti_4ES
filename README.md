@@ -12,9 +12,6 @@ Dixit è un gioco di carte basato sulle immagini e sull'interpretazione creativa
 * Tabellone di 30 caselle
 * 4 pedine e segnaligni per votare
 
-## Installazione
-
-
 ## Come si gioca
 1. Un giocatore è il narratore e sceglie una carta, dando un indizio.
 2. Gli altri giocatori scelgono una carta che si adatta all'indizio.
