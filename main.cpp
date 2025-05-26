@@ -19,7 +19,8 @@ int main(){
     vector<string> carte_tavolo;
 
     Carta c; //creazione dell'oggetto carta 
-    c.inizializza(); //metodo per inizializzare tutte le carte 
+    c.inizializza(); //metodo per inizializzare tutte le carte
+    c.mischia(); //metodo per mischiare le carte  
     Mazzo m; //creazione dell'oggetto mazzo 
     Regole r; //creazione dell'oggetto regole 
     r.mostra(); //metodo per mostrare le regole
@@ -112,6 +113,7 @@ int main(){
             m.pesca(numGiocatori); //la nuova carta viene pescata 
             narratore++; //il narratore cambia e diventa il giocatore successivo 
         }
+        narratore=0; 
         }while(punti1<=30 && punti2<=30 && punti3<=30 && punti4<=30 );
 
         if(punti1>=30) 
