@@ -1,7 +1,12 @@
 #ifndef MAZZO_E_H
 #define MAZZO_E_H
 #pragma once
+#include <iostream>
+#include <string>
+#include <vector>
+#include <string>
 
+using namespace std;
 class Mazzo_E 
 {
 protected:
