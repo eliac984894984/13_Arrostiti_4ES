@@ -5,12 +5,14 @@
 #include "include/Mazzo_Estensione.h"
 #include <iostream>
 #include <string>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
 
 int main(){
-    
+    srand(time(0)) ;
     Mazzo m; //creazione dell'oggetto mazzo 
     Mazzo_E me; 
     int var;
