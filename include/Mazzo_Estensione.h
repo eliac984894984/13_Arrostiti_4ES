@@ -1,12 +1,16 @@
 #ifndef MAZZO_H
 #define MAZZO_H
-#include "Estensione.h"
 #pragma once
 
-class Mazzo_E : Estensione
+class Mazzo_E 
 {
-
+protected:
+    vector<string> cartaestesa;
+    vector<vector<string>> carteGiocatori_e;
+    vector<string> mazzo_scarti_e;
 public:
+   void definisci();
+   void mischia_e();
     void distribuisci_e(int numGiocatori);
     void pesca_e(int numGiocatori);
     vector<string> giocaCarte_e(int numGiocatori, int narratore, string&cartaNarratore);
