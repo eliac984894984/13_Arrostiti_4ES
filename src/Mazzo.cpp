@@ -134,6 +134,8 @@ vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore, string&cartaNa
 
 void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore, int& p1, int& p2, int& p3, int& p4, string cartaNarratore ) {
     vector<int> voti(tavolo.size(), 0);
+    int voto1, voto2, voto3, voto4; 
+
     for (int i = 0; i < numGiocatori; i++) {
         if (i == narratore) {
             cout << "Giocatore " << i + 1 << " è il narratore e non vota.\n";
@@ -151,13 +153,24 @@ void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore, i
             cin >> voto;
         }
         voti[voto]++;
-    }
 
+        if(tavolo[voto]==cartaNarratore) 
+        {
+            cout << "il giocatore " << i + 1 << " ha indovinato!";
+        }
+
+        if(i==0) voto1=voto; 
+        if(i==1) voto2=voto;
+        if(i==2) voto3=voto;
+        if(i==3) voto4=voto;
+    }
 
     cout << "Risultati votazione:" << endl;
     for (int i = 0; i < (int)tavolo.size(); ++i) {
         cout << "Carta " << i << " (" << tavolo[i] << ") ha ricevuto " << voti[i] << " voti." << endl;
     }
+
+   // if((tavolo[voto1]==cartaNarratore && tavolo[voto2]==cartaNarratore && tavolo[voto3]==cartaNarratore && tavolo[voto4]==cartaNarratore ))
 }
 
 void Mazzo::scarta(vector<string>& tavolo) 
