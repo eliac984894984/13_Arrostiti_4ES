@@ -12,7 +12,6 @@
                 "src/Regole.cpp",
                 "src/Mazzo.cpp",
                 "src/Tabellone.cpp",
-                "src/Estensione.cpp",
                 "src/Mazzo_Estensione.cpp",
                 "-o",
                 "main.exe"
