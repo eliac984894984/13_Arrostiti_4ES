@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "main/main.cpp",
+                "main.cpp",
                 "src/Carta.cpp",
                 "src/Giocatore.cpp",
                 "src/Regole.cpp",
@@ -16,7 +16,7 @@
                 "src/Estensione.cpp",
                 "src/Mazzo_Estensione.cpp",
                 "-o",
-                "main/main.exe"
+                "main.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/dpaol/Documents/GitHub/13_Arrostiti_4ES/main",
-      "program": "c:/Users/dpaol/Documents/GitHub/13_Arrostiti_4ES/main/build/Debug/outDebug",
+      "cwd": "c:/Users/dpaol/Documents/GitHub/13_Arrostiti_4ES",
+      "program": "c:/Users/dpaol/Documents/GitHub/13_Arrostiti_4ES/main.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
