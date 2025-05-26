@@ -9,6 +9,8 @@ Dixit è un gioco di carte basato sulle immagini e sull'interpretazione creativa
 ## Caratteristiche
 * Fino a 4 giocatori online
 * 40 carte con breve descrizione (per la versione online), in 2 versioni: classiche e disney
+* Tabellone di 30 caselle
+* 4 pedine e segnaligni per votare
 
 ## Installazione
 
