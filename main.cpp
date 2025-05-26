@@ -52,7 +52,7 @@ int main(){
     Giocatore2.controlloPedine(); //meccanismo per controllare che il colore sia valido
     
     //terzo giocatore
-    cout << "inserici il nome e colore della pedina del secondo giocatore: " << endl ;
+    cout << "inserici il nome e colore della pedina del terzo giocatore: " << endl ;
     cin >> nomeGiocatore;
     do {
         cin >> colore3;
@@ -65,7 +65,7 @@ int main(){
     Giocatore3.controlloPedine(); //meccanismo per controllare che il colore sia valido
 
     //quarto giocatore
-    cout << "inserici il nome e colore della pedina del secondo giocatore: " << endl ;
+    cout << "inserici il nome e colore della pedina del quarto giocatore: " << endl ;
     cin >> nomeGiocatore;
     do {
         cin >> colore4;
