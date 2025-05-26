@@ -1,7 +1,6 @@
 #include "include/Giocatore.h"
 #include "include/Tabellone.h"
 #include "include/Regole.h"
-#include "include/Carta.h"
 #include "include/Mazzo.h"
 #include "include/Estensione.h"
 
@@ -12,20 +11,23 @@ using namespace std;
 
 
 int main(){
-    
+    int var;
     string nomeGiocatore, colore1, colore2, colore3, colore4, cartaNarratore;
     int scelta, narratore=0, punti1=0, punti2=0, punti3=0, punti4=0;
-    int numGiocatori=4; 
+    int numGiocatori=4;
+    Regole r; //creazione dell'oggetto regole  
     vector<string> carte_tavolo;
-
-    Carta c; //creazione dell'oggetto carta 
-    c.inizializza(); //metodo per inizializzare tutte le carte
-    c.mischia(); //metodo per mischiare le carte  
+    cout <<"Vuoi vedere le regole? se si metti 1: ";
+    cin >> var;
+    if (var == 1) {  r.mostra(); }//metodo per mostrare le regole}
     Mazzo m; //creazione dell'oggetto mazzo 
-    Regole r; //creazione dell'oggetto regole 
-    r.mostra(); //metodo per mostrare le regole
+    m.inizializza(); //metodo per inizializzare tutte le carte
+    m.mischia(); //metodo per mischiare le carte  
     
-
+   
+    
+    cout << "Carte nel mazzo dopo inizializzazione: " << m.getCarteSize() << endl;
+    
     cout <<endl;
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non è possibile per due giocatori scegliere la stessa pedina. " << endl;
 
@@ -108,6 +110,7 @@ int main(){
             cout << "il narratore e' il giocatore: " << narratore + 1 << endl; 
        
             carte_tavolo= m.giocaCarte(numGiocatori, narratore, cartaNarratore); //il narratore sceglie la sua carta e tutti i giocatori giocano la loro carta
+        
             m.votaCarte(numGiocatori, carte_tavolo, i, punti1, punti2, punti3, punti4, cartaNarratore); //i giocatori votano la presunta carta corretta
             m.scarta(carte_tavolo); //le carte sul tavolo vengono scartate e messe nel mazzo degli scarti
             m.pesca(numGiocatori); //la nuova carta viene pescata 

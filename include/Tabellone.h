@@ -2,7 +2,12 @@
 #define TABELLONE_H
 
 #pragma once
+#include <iostream>
+#include <string>
+#include <vector>
+#include <string>
 
+using namespace std;
 #define Righe 8
 #define Colonne 9
 
