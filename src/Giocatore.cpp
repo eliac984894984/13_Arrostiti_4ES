@@ -15,7 +15,7 @@ void Giocatore :: controlloPedine()
    do{
         if(colore!="blu" && colore!="rosso" && colore!="giallo" && colore!="verde")
         {
-            cout<<"il colore inserito non e' valido. Inserire un nuovo colore"; 
+            cout<<"il colore inserito non e' valido. Inserire un nuovo colore: "; 
             cin >> colore; 
         };
    }while(colore!="blu" && colore!="rosso" && colore!="giallo" && colore!="verde");

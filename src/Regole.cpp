@@ -5,12 +5,12 @@ void Regole::mostra() {
     cout << "=== Regole del gioco ===" << endl;
 
     cout << "Lo scopo e' quello di far indovinare agli altri giocatori qual'e' la carta descritta dal narratore,"
-         << "così da poter conquistare punti che ti permetteranno di avanzare nel tabellone e VINCERE!" << endl;
+         << "cosi' da poter conquistare punti che ti permetteranno di avanzare nel tabellone e VINCERE!" << endl;
 
-    cout << "Il tabellone presenta 30 caselle e ogni giocatore ha lo scopo di raggiungere l'ultima per primo."
+    cout << "Il tabellone presenta 30 caselle e ogni giocatore ha lo scopo di raggiungere l'ultima per primo. "
          << "Ogni giocatore e' rappresentato da una pedina diversa, per tenere traccia della cassella in cui si trova nel tabellone. " << endl;
 
-    cout << "Il numero di giocatori e' 4, per giocare in modo più dinamico si consiglia che abbiano più di 8 anni."
+    cout << "Il numero di giocatori e' 4, per giocare in modo piu' dinamico si consiglia che abbiano più di 8 anni. "
          << "Vi sono varie estensioni che aggiungono carte o regole al gioco oppure edizioni come: Disney, Stellare, Odyssey... "<< endl;
 
     cout << "Per quanto riguarda i punti ci sono diversi modi per ottenerli. Ogni giocatore riceve 5 carte e dei segnalini voto numerati. "
