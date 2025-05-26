@@ -1,0 +1,52 @@
+Abbiamo utilizzato l’intelligenza artificiale in alcune parti del nostro programma per poter sfruttare le funzioni dei vettori dinamici che non abbiamo studiato in classe: 
+—>elia 
+
+Carta 
+La classe carta serve per inizializzare le carte con le varie descrizioni e attraverso un metodo mischiarle.
+
+Mazzo 
+È la classe figlia di carta per questo eredita le carte inizializzate (sono attributi protetti).
+-Il metodo distribuisci serve per distribuire le 5 carte iniziali ai giocatori
+-Il metodo pesca serve per pescare una singola carta alla fine di ogni turno in modo tale che i giocatori abbiano sempre 5 carte in mano
+-nel metodo giocaCarte vengono gestite le dinamiche principali del gioco: 
+il narratore sceglie la carta da far indovinare agli altri giocatori. 
+Il narratore dice l’indizio (una parola) in modo tale da fare indovinare la carta ai giocatori 
+i giocatori scelgono la carta da “mettere sul tavolo” basandosi sull’inizio del narratore
+-nel metodo votaCarte i giocatori (non il narratore) votano quella che secondo loro è la carta scartata dal narratore e vengono gestiti i punti dei giocatori 
+-il metodo scarta serve per togliere le carte dal tavolo e riporle nel mazzo degli scarti 
+-i metodi ricarica e mazzo_v servono per ricaricare il mazzo generale quando esso finisce prendendo le carte dal mazzo degli scarti 
+
+Estensione
+La classe Estensione serve per inizializzare le carte con le varie descrizioni a tema disney e attraverso un metodo mischiarle.
+
+Mazzo_E
+È la classe figlia di Estensione per questo eredita le carte inizializzate (sono attributi protetti).
+-Il metodo distribuisci_e serve per distribuire le 5 carte iniziali ai giocatori
+-Il metodo pesca_e serve per pescare una singola carta alla fine di ogni turno in modo tale che i giocatori abbiano sempre 5 carte in mano
+-nel metodo giocaCarte_e vengono gestite le dinamiche principali del gioco: 
+il narratore sceglie la carta da far indovinare agli altri giocatori. 
+Il narratore dice l’indizio (una parola) in modo tale da fare indovinare la carta ai giocatori 
+i giocatori scelgono la carta da “mettere sul tavolo” basandosi sull’inizio del narratore
+-nel metodo votaCarte_e i giocatori (non il narratore) votano quella che secondo loro è la carta scartata dal narratore e vengono gestiti i punti dei giocatori 
+-il metodo scarta_e serve per togliere le carte dal tavolo e riporle nel mazzo degli scarti 
+-i metodi ricarica_e e mazzo_v_e servono per ricaricare il mazzo generale quando esso finisce prendendo le carte dal mazzo degli scarti
+
+Giocatore
+La classe giocatore ha come attributi il nome e il colore della pedina dei quattro giocatori. 
+-il metodo controlloPedine serve per controllare che i giocatori non inseriscano dei colori non validi per le loro pedine 
+-il metodo getColore serve per accedere al colore delle pedine dei giocatori essendo che è un attributo privato 
+
+
+Regole
+La classe regole serve per stampare all’inizio del gioco le regole del gioco.
+
+
+Tabellone
+La classe tabellone serve per stampare all’inizio del gioco il tabellone rettangolare con le 30 caselle. 
+
+
+Main 
+Nel main vengono gestite le dinamiche del gioco richiamando i metodi delle classi 
+il gioco inizia con il richiamo del metodo mostra delle regole in modo tale da stampare le regole.
+Successivamente vengono richiesti il nome e il colore delle pedine dei giocatori e vi è un meccanismo per controllare che più giocatori non scelgano una pedina dello stesso colore.
+Dopo i vari giocatori viene richiesto se si vuole giocare con l’estensione o meno. Se si sceglie il gioco di base vengono attribuite 5 carte ad ogni giocatore e il gioco inizia. Se viene scelta l’estensione accade la medesima cosa ma con le carte Disney.
