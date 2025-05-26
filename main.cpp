@@ -14,7 +14,8 @@ using namespace std;
 int main(){
     srand(time(0)) ;
     Mazzo m; //creazione dell'oggetto mazzo 
-    Mazzo_E me; 
+    Mazzo_E me; //creazione dell'oggetto mazzo con le carte di disney 
+    Tabellone t; //creazione dell'oggetto tabellone
     int var;
     string nomeGiocatore, colore1, colore2, colore3, colore4, cartaNarratore;
     int scelta, narratore=0, punti1=0, punti2=0, punti3=0, punti4=0;
@@ -24,7 +25,8 @@ int main(){
     cout <<"Vuoi vedere le regole? se si metti 1: ";
     cin >> var;
     if (var == 1) {  r.mostra(); }//metodo per mostrare le regole}
-      
+    
+    t.Stampa();
     
     cout <<endl;
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non e' possibile per due giocatori scegliere la stessa pedina. " << endl;
@@ -114,14 +116,14 @@ int main(){
             carte_tavolo= m.giocaCarte(numGiocatori, narratore, cartaNarratore); //il narratore sceglie la sua carta e tutti i giocatori giocano la loro carta
         
             m.votaCarte(numGiocatori, carte_tavolo, narratore, punti1, punti2, punti3, punti4, cartaNarratore); //i giocatori votano la presunta carta corretta
+            if(punti1>=30 || punti2>=30 || punti3>=30 || punti4>=30) {break;}
             m.scarta(carte_tavolo); //le carte sul tavolo vengono scartate e messe nel mazzo degli scarti
             m.pesca(numGiocatori); //la nuova carta viene pescata 
             
-            if(punti1>=30 || punti2>=30 || punti3>=30 || punti4>=30) break;
             narratore = (narratore + 1) % numGiocatori;
         }
          
-        }while(punti1<=30 && punti2<=30 && punti3<=30 && punti4<=30 );
+        }while(punti1<30 && punti2<30 && punti3<30 && punti4<30 );
 
         if(punti1>=30) 
         {
