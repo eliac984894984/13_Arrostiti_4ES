@@ -8,11 +8,18 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "main/main.cpp",
+                "src/Carta.cpp",
+                "src/Giocatore.cpp",
+                "src/Regole.cpp",
+                "src/Mazzo.cpp",
+                "src/Tabellone.cpp",
+                "src/Estensione.cpp",
+                "src/Mazzo_Estensione.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "main/main.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
