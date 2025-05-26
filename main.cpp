@@ -24,10 +24,6 @@ int main(){
     if (var == 1) {  r.mostra(); }//metodo per mostrare le regole}
       
     
-   
-    
-   
-    
     cout <<endl;
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non e' possibile per due giocatori scegliere la stessa pedina. " << endl;
 
@@ -145,6 +141,32 @@ int main(){
     //scelta del gioco con le estensioni 
     if(scelta==2) 
     {
+        me.definisci(); //metodo per inizializzare tutte le carte
+        me.mischia_e(); //metodo per mischiare le carte
+        
+        //attribuzione delle prime 5 carte ai giocatori 
+        me.distribuisci_e(numGiocatori);
+
+        do{
+        //inizio effettivo del gioco     
+        for(int i=0; i<numGiocatori; i++)
+        {
+            if(me.mazzo_v_e()) { //meccanismo per controllare se il mazzo generale finisce 
+                me.ricarica_e();
+            }
+
+            cout << "il narratore e' il giocatore: " << narratore + 1 << endl; 
+       
+            carte_tavolo= me.giocaCarte_e(numGiocatori, narratore, cartaNarratore); //il narratore sceglie la sua carta e tutti i giocatori giocano la loro carta
+        
+            me.votaCarte_e(numGiocatori, carte_tavolo, i, punti1, punti2, punti3, punti4, cartaNarratore); //i giocatori votano la presunta carta corretta
+            me.scarta_e(carte_tavolo); //le carte sul tavolo vengono scartate e messe nel mazzo degli scarti
+            me.pesca_e(numGiocatori); //la nuova carta viene pescata 
+            if(punti1<=30 && punti2<=30 && punti3<=30 && punti4<=30) break;
+            narratore++; //il narratore cambia e diventa il giocatore successivo 
+        }
+        narratore=0; 
+        }while(punti1<=30 && punti2<=30 && punti3<=30 && punti4<=30 );
         //rifare la stessa cosa ma con i metodi dell'estensione 
         if(punti1>=30) 
         {
