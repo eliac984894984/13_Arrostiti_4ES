@@ -1,11 +1,9 @@
 Abbiamo utilizzato l’intelligenza artificiale in alcune parti del nostro programma per poter sfruttare le funzioni dei vettori dinamici che non abbiamo studiato in classe: 
-—>elia 
-
-Carta 
-La classe carta serve per inizializzare le carte con le varie descrizioni e attraverso un metodo mischiarle.
+—L'utilizzio delle suddette intelligienze artificiali è stato fatto per comprendere meglio alcune funzioni dei vettori magari non accennate in classe.
+penso che l'uso di questi "Aiuti" non abbia inficiato sullo svolgimento del programma poiche non abbiamo fatto altro che inserire all'interno del programma ciò che avevamo appreso.
+-è stata utilizzata anche per correggiere degli errori che noi , quando lavoravamo da soli, non riuscivamo a comprendere
 
 Mazzo 
-È la classe figlia di carta per questo eredita le carte inizializzate (sono attributi protetti).
 -Il metodo distribuisci serve per distribuire le 5 carte iniziali ai giocatori
 -Il metodo pesca serve per pescare una singola carta alla fine di ogni turno in modo tale che i giocatori abbiano sempre 5 carte in mano
 -nel metodo giocaCarte vengono gestite le dinamiche principali del gioco: 
@@ -16,11 +14,8 @@ i giocatori scelgono la carta da “mettere sul tavolo” basandosi sull’inizi
 -il metodo scarta serve per togliere le carte dal tavolo e riporle nel mazzo degli scarti 
 -i metodi ricarica e mazzo_v servono per ricaricare il mazzo generale quando esso finisce prendendo le carte dal mazzo degli scarti 
 
-Estensione
-La classe Estensione serve per inizializzare le carte con le varie descrizioni a tema disney e attraverso un metodo mischiarle.
 
 Mazzo_E
-È la classe figlia di Estensione per questo eredita le carte inizializzate (sono attributi protetti).
 -Il metodo distribuisci_e serve per distribuire le 5 carte iniziali ai giocatori
 -Il metodo pesca_e serve per pescare una singola carta alla fine di ogni turno in modo tale che i giocatori abbiano sempre 5 carte in mano
 -nel metodo giocaCarte_e vengono gestite le dinamiche principali del gioco: 
