@@ -122,7 +122,7 @@ void Mazzo::pesca(int numGiocatori)
 vector<string> Mazzo::giocaCarte(int numGiocatori, int narratore, string&cartaNarratore)
 {
     vector<string> tavolo;
-    //string cartaNarratore; devo dichiararlo ancora?
+    
 
     cout << "Mano del narratore (Giocatore " << narratore + 1 << "): " << endl;
     for (int j = 0; j < carteGiocatori[narratore].size(); j++) 
