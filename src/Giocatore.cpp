@@ -5,8 +5,8 @@ using namespace std;
 
 Giocatore::Giocatore(string n, string c)
 {
-    n = nome;
-    c = colore;
+    nome=n;
+    colore=c;
 }
 
 
