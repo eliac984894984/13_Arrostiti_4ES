@@ -26,7 +26,7 @@ int main(){
     
    
     
-    cout << "Carte nel mazzo dopo inizializzazione: " << m.getCarteSize() << endl;
+   
     
     cout <<endl;
     cout << "i colori delle pedine disponibili sono blu, rosso, giallo e verde. Non e' possibile per due giocatori scegliere la stessa pedina. " << endl;
