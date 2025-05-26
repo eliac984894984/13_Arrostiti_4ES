@@ -227,7 +227,125 @@ void Mazzo::votaCarte(int numGiocatori, vector<string>& tavolo, int narratore, i
         cout << "Carta " << i << " (" << tavolo[i] << ") ha ricevuto " << voti[i] << " voti." << endl;
     }
 
-   // if((tavolo[voto1]==cartaNarratore && tavolo[voto2]==cartaNarratore && tavolo[voto3]==cartaNarratore && tavolo[voto4]==cartaNarratore ))
+    //gestione dei punti     
+   if(narratore==0) 
+   {
+    if((tavolo[voto2]==cartaNarratore && tavolo[voto3]==cartaNarratore && tavolo[voto4]==cartaNarratore)|| (tavolo[voto2]!=cartaNarratore && tavolo[voto3]!=cartaNarratore && tavolo[voto4]!=cartaNarratore))
+    {
+        p1=p1+0; 
+        p2=p2+2; 
+        p3=p3+2; 
+        p4=p4+2; 
+    }
+    else 
+    {
+        if(tavolo[voto2]==cartaNarratore)
+        {
+            p1=p1+3;
+            p2=p2+3;
+        }
+        if(tavolo[voto3]==cartaNarratore)
+        {
+            p1=p1+3;
+            p3=p3+3;
+        }
+        if(tavolo[voto4]==cartaNarratore)
+        {
+            p1=p1+3;
+            p4=p4+3;
+        }
+    }
+   }
+
+   if(narratore==1) 
+   {
+    if((tavolo[voto1]==cartaNarratore && tavolo[voto3]==cartaNarratore && tavolo[voto4]==cartaNarratore)|| (tavolo[voto1]!=cartaNarratore && tavolo[voto3]!=cartaNarratore && tavolo[voto4]!=cartaNarratore))
+    {
+        p1=p1+2; 
+        p2=p2+0; 
+        p3=p3+2; 
+        p4=p4+2;  
+    }
+    else 
+    {
+        if(tavolo[voto1]==cartaNarratore)
+        {
+            p1=p1+3;
+            p2=p2+3;
+        }
+        if(tavolo[voto3]==cartaNarratore)
+        {
+            p2=p2+3;
+            p3=p3+3;
+        }
+        if(tavolo[voto4]==cartaNarratore)
+        {
+            p2=p2+3;
+            p4=p4+3;
+        }
+    }
+    
+   }
+   
+   if(narratore==2) 
+   {
+    if((tavolo[voto2]==cartaNarratore && tavolo[voto1]==cartaNarratore && tavolo[voto4]==cartaNarratore)|| (tavolo[voto2]!=cartaNarratore && tavolo[voto1]!=cartaNarratore && tavolo[voto4]!=cartaNarratore))
+    {
+        p1=p1+2; 
+        p2=p2+2; 
+        p3=p3+0; 
+        p4=p4+2; 
+    }
+    else 
+    {
+        if(tavolo[voto2]==cartaNarratore)
+        {
+            p3=p3+3;
+            p2=p2+3;
+        }
+        if(tavolo[voto1]==cartaNarratore)
+        {
+            p1=p1+3;
+            p3=p3+3;
+        }
+        if(tavolo[voto4]==cartaNarratore)
+        {
+            p3=p3+3;
+            p4=p4+3;
+        }
+    }
+    }
+   
+   if(narratore==3) 
+   {
+    if((tavolo[voto2]==cartaNarratore && tavolo[voto3]==cartaNarratore && tavolo[voto1]==cartaNarratore)|| (tavolo[voto2]!=cartaNarratore && tavolo[voto3]!=cartaNarratore && tavolo[voto1]!=cartaNarratore))
+    {
+        p1=p1+2; 
+        p2=p2+2; 
+        p3=p3+2; 
+        p4=p4+0; 
+    }
+    else 
+    {
+        if(tavolo[voto2]==cartaNarratore)
+        {
+            p4=p4+3;
+            p2=p2+3;
+        }
+        if(tavolo[voto1]==cartaNarratore)
+        {
+            p1=p1+3;
+            p4=p4+3;
+        }
+        if(tavolo[voto3]==cartaNarratore)
+        {
+            p3=p3+3;
+            p4=p4+3;
+        }
+    }
+
+   }
+
 }
 
 void Mazzo::scarta(vector<string>& tavolo) 
