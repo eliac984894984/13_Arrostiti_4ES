@@ -3,7 +3,7 @@
 #include "include/Regole.h"
 #include "include/Mazzo.h"
 #include "include/Estensione.h"
-
+#include "include/Mazzo_Estensione.h"
 #include <iostream>
 #include <string>
 
@@ -11,6 +11,9 @@ using namespace std;
 
 
 int main(){
+    
+    Mazzo m; //creazione dell'oggetto mazzo 
+    Mazzo_E me; 
     int var;
     string nomeGiocatore, colore1, colore2, colore3, colore4, cartaNarratore;
     int scelta, narratore=0, punti1=0, punti2=0, punti3=0, punti4=0;
@@ -20,9 +23,7 @@ int main(){
     cout <<"Vuoi vedere le regole? se si metti 1: ";
     cin >> var;
     if (var == 1) {  r.mostra(); }//metodo per mostrare le regole}
-    Mazzo m; //creazione dell'oggetto mazzo 
-    m.inizializza(); //metodo per inizializzare tutte le carte
-    m.mischia(); //metodo per mischiare le carte  
+      
     
    
     
@@ -96,6 +97,10 @@ int main(){
 
     //scelta del gioco di base
     if (scelta==1) {
+
+        m.inizializza(); //metodo per inizializzare tutte le carte
+        m.mischia(); //metodo per mischiare le carte
+        
         //attribuzione delle prime 5 carte ai giocatori 
         m.distribuisci(numGiocatori);
 
